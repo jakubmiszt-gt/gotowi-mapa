@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Monitoring regionalny - woj. lubelskie | Gotowi Teraz</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+  :root{--brand:#1F3A5F;--react:#C0392B;--pre:#E8A200;--gov:#2E6DA4;--ink:#222;--grey:#666;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f4f6f9}
+  header{background:var(--brand);color:#fff;padding:14px 20px}
+  header h1{margin:0;font-size:19px;font-weight:700}
+  header .sub{font-size:13px;opacity:.85;margin-top:3px}
+  .tabs{display:flex;gap:0;background:#16304f;padding:0 12px}
+  .tab{padding:11px 18px;color:#c8d6e6;font-size:14px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent}
+  .tab.active{color:#fff;border-bottom-color:var(--react);background:rgba(255,255,255,.06)}
+  .view{display:none}
+  .view.active{display:block}
+  /* MAP VIEW */
+  .wrap{display:flex;height:calc(100vh - 108px);min-height:520px}
+  #map{flex:1;min-width:0}
+  .panel{width:350px;background:#fff;border-left:1px solid #e2e6ec;overflow-y:auto;padding:14px}
+  .controls{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+  .btn{border:1px solid #d0d6de;background:#fff;border-radius:20px;padding:6px 11px;font-size:12px;cursor:pointer;font-weight:600;color:var(--grey)}
+  .btn.active{color:#fff;border-color:transparent}
+  .btn.react.active{background:var(--react)} .btn.pre.active{background:var(--pre)} .btn.gov.active{background:var(--gov)} .btn.all.active{background:var(--brand)}
+  .legend{font-size:12px;color:var(--grey);line-height:1.6;margin-bottom:12px;border-top:1px solid #eee;padding-top:10px}
+  .dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .card{border:1px solid #e6e9ee;border-radius:8px;padding:10px 12px;margin-bottom:9px;cursor:pointer;transition:.15s}
+  .card:hover{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+  .card .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+  .tag{font-size:10px;font-weight:700;color:#fff;border-radius:4px;padding:2px 7px;letter-spacing:.2px}
+  .tag.P1{background:var(--react)} .tag.P2{background:var(--pre)} .tag.B2G{background:var(--gov)}
+  .score{font-size:20px;font-weight:800;color:var(--brand)}
+  .card h3{margin:2px 0 4px;font-size:14px}
+  .card .loc{font-size:12px;color:var(--grey);margin-bottom:5px}
+  .card .rec{font-size:12px;color:#333;background:#f6f8fb;border-radius:5px;padding:6px 8px}
+  .card .srclink{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:#2E6DA4;text-decoration:none}
+  .card .srclink:hover{text-decoration:underline}
+  .leaflet-popup-content{font-size:13px;line-height:1.5}
+  .leaflet-popup-content b{color:var(--brand)}
+  /* REPORT VIEW */
+  .report{padding:20px 26px;max-width:1200px;margin:0 auto}
+  .report .lead{font-size:14px;color:#333;background:#fff;border:1px solid #e6e9ee;border-radius:10px;padding:14px 16px;margin-bottom:18px}
+  .report .lead b{color:var(--brand)}
+  .platforms{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+  .plat{background:#fff;border:1px solid #e6e9ee;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+  .plat .head{padding:13px 16px;color:#fff}
+  .plat .head .nm{font-size:17px;font-weight:800}
+  .plat .head .sb{font-size:12px;opacity:.9}
+  .plat .strength{font-size:12px;color:#444;padding:11px 16px;background:#f6f8fb;border-bottom:1px solid #eee;line-height:1.5}
+  .plat .body{padding:12px 16px}
+  .camp{border:1px solid #eef1f5;border-radius:8px;padding:10px 12px;margin-bottom:11px}
+  .camp .ct{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+  .camp .ct b{font-size:13.5px}
+  .ptag{font-size:10px;font-weight:700;color:#fff;border-radius:4px;padding:2px 7px}
+  .ptag.react{background:var(--react)} .ptag.pre{background:var(--pre)}
+  .kv{display:grid;grid-template-columns:96px 1fr;gap:3px 8px;font-size:12px;line-height:1.45}
+  .kv .k{color:var(--grey);font-weight:600}
+  .kv .v{color:#222}
+  .govnote{background:#eaf2fb;border:1px solid #cfe0f2;border-radius:10px;padding:14px 16px;margin-top:16px;font-size:13px;line-height:1.55}
+  .govnote b{color:var(--gov)}
+  .sens{font-size:12px;color:#8a5a00;background:#fff6e5;border:1px solid #ffe2ab;border-radius:8px;padding:9px 12px;margin-top:14px}
+  .footer{font-size:11px;color:#999;padding:8px 14px;background:#fff;border-top:1px solid #eee}
+  a{color:#2E6DA4}
+</style>
+</head>
+<body>
+<header>
+  <h1>Monitoring regionalny sygnalow reklamowych - wojewodztwo lubelskie</h1>
+  <div class="sub">Gotowi Teraz | brief z 24.07.2026, okno 48h</div>
+</header>
+<div class="tabs">
+  <div class="tab active" data-tab="map">Mapa sygnalow</div>
+  <div class="tab" data-tab="report">Raport reklamowy (Meta / Google / TikTok)</div>
+</div>
+
+<!-- ================= MAPA ================= -->
+<div class="view active" id="view-map">
+<div class="wrap">
+  <div id="map"></div>
+  <div class="panel">
+    <div class="controls">
+      <button class="btn all active" data-f="all">Wszystkie</button>
+      <button class="btn react" data-f="P1">Reaktywna</button>
+      <button class="btn pre" data-f="P2">Wyprzedzajaca</button>
+      <button class="btn gov" data-f="B2G">Samorzad</button>
+    </div>
+    <div id="list"></div>
+    <div class="legend">
+      <div><span class="dot" style="background:#C0392B"></span><b>Reklama reaktywna</b> - kryzys trwa teraz, reklama od razu</div>
+      <div><span class="dot" style="background:#E8A200"></span><b>Reklama wyprzedzajaca</b> - ostrzezenie, kampania z wyprzedzeniem</div>
+      <div><span class="dot" style="background:#2E6DA4"></span><b>Lead do samorzadu</b> - sprzedaz do gminy, nie reklama konsumencka</div>
+      <div style="margin-top:6px">Wielkosc markera odpowiada sile sygnalu (Signal Score).</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ================= RAPORT ================= -->
+<div class="view" id="view-report">
+  <div class="report">
+    <div class="lead" id="reportLead"></div>
+    <div class="platforms" id="platforms"></div>
+    <div class="govnote" id="govNote"></div>
+    <div class="sens">Uwaga na wrazliwosc: przy zdarzeniach ze szkodami i poszkodowanymi (nawalnica Pulawy) przekaz ma byc pomocny i rzeczowy, bez epatowania nieszczesciem. Nie zerowac na strachu.</div>
+  </div>
+</div>
+
+<div class="footer">Zrodla: PSP, Radio Lublin, Lublin112, Wspolnota Pulawska, IMGW, RCB, Lubelski Urzad Wojewodzki. Dokument operacyjny, dane zdarzeniowe moga sie zmieniac.</div>
+
+<script>
+const LABELS={
+  P1:{name:"Reklama reaktywna",short:"Reaktywna",color:"#C0392B"},
+  P2:{name:"Reklama wyprzedzajaca",short:"Wyprzedzajaca",color:"#E8A200"},
+  B2G:{name:"Lead do samorzadu",short:"Samorzad",color:"#2E6DA4"},
+};
+const signals = [
+  {id:1,prio:"P1",score:94,title:"Nawalnica i powodz blyskawiczna, brak pradu",loc:"pow. pulawski (Pulawy, Konskowola, Gora Pulawska, Baranow)",lat:51.42,lon:21.97,
+   rec:"Geo-fence 15 km wokol Pulaw, budzet wysoki, przekaz reaktywny. Flaga wrazliwosci: byly szkody, ton pomocny.",src:"Wspolnota Pulawska",url:"https://pulawy.24wspolnota.pl/informacje-pulawskie/powiat-pulawski-po-burzy-najwieksze-szkody-w-pulawach-i-gminie-konskowola/0XgPWkRAjsfHj6VxJOUv"},
+  {id:2,prio:"P2",score:76,title:"Wichura, przerwy w dostawie pradu",loc:"Lublin i pow. lubelski",lat:51.25,lon:22.57,
+   rec:"Rozszerzenie geo poza Pulawy, remarketing na haslo brak pradu.",src:"Lublin112",url:"https://www.lublin112.pl/grzmi-pada-i-mocno-wieje-na-lubelszczyznie-szereg-powalonych-drzew-zalanych-budynkow-i-zerwanych-dachow/"},
+  {id:3,prio:"P2",score:72,title:"Uszkodzenia po burzy, przerwy w pradzie",loc:"pow. bialski",lat:52.03,lon:23.12,
+   rec:"Warstwa wyprzedzajaca, kampania na kolejne burze.",src:"Radio Lublin",url:"https://radio.lublin.pl/2026/07/zerwane-dachy-powalone-drzewa-niebezpieczne-burze-nad-regionem/"},
+  {id:4,prio:"P2",score:70,title:"Uszkodzenia po burzy",loc:"pow. radzynski",lat:51.78,lon:22.62,
+   rec:"Warstwa wyprzedzajaca, remarketing.",src:"Radio Lublin",url:"https://radio.lublin.pl/2026/07/zerwane-dachy-powalone-drzewa-niebezpieczne-burze-nad-regionem/"},
+  {id:5,prio:"P2",score:75,title:"Aktywne ostrzezenie IMGW: burze, wiatr do 65 km/h, grad",loc:"cale woj. lubelskie",lat:51.05,lon:22.30,
+   rec:"Kampania wyprzedzajaca 48h na cale wojewodztwo, przekaz przygotuj sie zanim uderzy.",src:"Dziennik Wschodni / IMGW",url:"https://www.dziennikwschodni.pl/artykul/390681,imgw-ostrzega-rcb-rozsyla-alerty"},
+  {id:6,prio:"B2G",score:88,title:"Budowa magazynu OC, 5,3 mln zl",loc:"gm. Niedrzwica Duza",lat:51.13,lon:22.42,
+   rec:"Priorytet kontaktu B2G. Oferta: wyposazenie magazynu OC w zestawy 72h + pakiety dla mieszkancow.",src:"Lubelski UW / Lublin112",url:"https://www.lublin112.pl/ponad-90-mln-zl-dla-samorzadow-kolejne-inwestycje-w-ochrone-ludnosci-w-wojewodztwie-lubelskim/"},
+  {id:7,prio:"B2G",score:80,title:"Miejsca schronienia, 15 mln zl",loc:"Starostwo Leczna",lat:51.30,lon:22.88,
+   rec:"Lead B2G, oferta pakietowa do gminy.",src:"Lubelski UW",url:"https://www.gov.pl/web/uw-lubelski/kolejne-miliony-na-ochrone-ludnosci-i-obrone-cywilna"},
+  {id:8,prio:"B2G",score:78,title:"Modernizacja i wyposazenie budowli ochronnych, 13,5 mln zl",loc:"Miasto Lublin",lat:51.235,lon:22.60,
+   rec:"Lead B2G, duzy budzet OLiOC.",src:"Lubelski UW",url:"https://www.gov.pl/web/uw-lubelski/kolejne-miliony-na-ochrone-ludnosci-i-obrone-cywilna"},
+  {id:9,prio:"B2G",score:66,title:"Wsparcie na ochrone ludnosci",loc:"pow. chelmski i gminy",lat:51.14,lon:23.47,
+   rec:"Lead B2G, sprawdzic w monitoringu przetargow.",src:"Super Tydzien Chelmski",url:"https://www.supertydzien.pl/artykul/49157,miliony-na-bezpieczenstwo-mieszkancow-powiat-chelmski-i-gminy-z-nowym-wsparciem-na-ochrone-ludnosci"},
+  {id:10,prio:"B2G",score:60,title:"Konkurs ofert na ratownictwo i ochrone ludnosci, 65 tys. zl",loc:"gm. Opole Lubelskie",lat:51.15,lon:21.97,
+   rec:"Lead B2G mniejszej skali.",src:"Wspolnota Opolska",url:"https://opole.24wspolnota.pl/informacje-opolskie/opole-lubelskie-65-tysiecy-na-bezpieczenstwo-gmina-oglasza-konkurs-dla-strazakow-i-organizacji/kVa3Y7Qr0ClEjuvcHvoO"},
+];
+
+/* ---------- MAP ---------- */
+const map=L.map('map',{scrollWheelZoom:true}).setView([51.35,22.6],8);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
+const markers={};
+function radius(s){return 8+(s-55)/40*16;}
+function popupHtml(d){return `<b>[${LABELS[d.prio].name}] Score ${d.score}</b><br><b>${d.title}</b><br><span style="color:#666">${d.loc}</span><br><br>${d.rec}<br><br>Zrodlo: <a href="${d.url}" target="_blank" rel="noopener" style="color:#2E6DA4;font-weight:600">${d.src} &#8599;</a>`;}
+signals.forEach(d=>{
+  const m=L.circleMarker([d.lat,d.lon],{radius:radius(d.score),color:"#fff",weight:1.5,fillColor:LABELS[d.prio].color,fillOpacity:.85});
+  m.bindPopup(popupHtml(d),{maxWidth:290}); m.addTo(map); markers[d.id]=m;
+});
+function renderList(filter){
+  const el=document.getElementById('list'); el.innerHTML='';
+  signals.filter(d=>filter==='all'||d.prio===filter).sort((a,b)=>b.score-a.score).forEach(d=>{
+    const c=document.createElement('div'); c.className='card';
+    c.innerHTML=`<div class="top"><span class="tag ${d.prio}">${LABELS[d.prio].short}</span><span class="score">${d.score}</span></div>
+      <h3>${d.title}</h3><div class="loc">${d.loc}</div><div class="rec">${d.rec}</div>
+      <a class="srclink" href="${d.url}" target="_blank" rel="noopener">Zrodlo: ${d.src} &#8599;</a>`;
+    c.querySelector('.srclink').addEventListener('click',e=>e.stopPropagation());
+    c.onclick=()=>{map.setView([d.lat,d.lon],10);markers[d.id].openPopup();};
+    el.appendChild(c);
+  });
+}
+function applyFilter(f){
+  signals.forEach(d=>{const vis=(f==='all'||d.prio===f);const m=markers[d.id];if(vis){m.addTo(map);}else{map.removeLayer(m);}});
+  renderList(f);
+  document.querySelectorAll('.controls .btn').forEach(b=>b.classList.toggle('active',b.dataset.f===f));
+}
+document.querySelectorAll('.controls .btn').forEach(b=>b.onclick=()=>applyFilter(b.dataset.f));
+applyFilter('all');
+
+/* ---------- REPORT ---------- */
+const report = {
+  lead:`Z tego przebiegu wynikaja <b>2 kampanie konsumenckie</b> (reaktywna i wyprzedzajaca) oraz <b>5 leadow do samorzadu</b>, ktore ida osobnym torem sprzedazy, nie do reklamy. Ponizej gotowe ustawienia w podziale na platformy.`,
+  platforms:[
+    {key:"meta",name:"Meta Ads",sub:"Facebook + Instagram",color:"#1877F2",
+     strength:"Najprecyzyjniejsze geo (pineska plus promien) i targetowanie zainteresowan. Najlepsze do reklamy reaktywnej w promieniu zdarzenia oraz do remarketingu.",
+     campaigns:[
+       {type:"react",tag:"Reaktywna",title:"Nawalnica Pulawy (teraz)",kv:[
+         ["Geo","Pineska Pulawy plus promien 15 km (Konskowola, Gora Pulawska)"],
+         ["Budzet","Wysoki, okno 24 do 48h"],
+         ["Format","Pojedyncze wideo lub reel, mobile-first"],
+         ["Odbiorca","25 do 60 lat w promieniu, Advantage plus audience"],
+         ["Zainteresowania","dom i rodzina, ogrod, DIY, biwak, bezpieczenstwo"],
+         ["Przekaz","Prad i woda na kolejne 72h, zanim wroci burza"],
+       ]},
+       {type:"pre",tag:"Wyprzedzajaca",title:"Ostrzezenie IMGW (cale woj.)",kv:[
+         ["Geo","Cale woj. lubelskie"],
+         ["Budzet","Sredni, okno 48h"],
+         ["Format","Karuzela pokazujaca zawartosc zestawu 72h"],
+         ["Odbiorca","25 do 60 lat, wlasciciele domow i mieszkan"],
+         ["Przekaz","Przygotuj sie zanim uderzy"],
+       ]},
+     ]},
+    {key:"google",name:"Google Ads",sub:"Search + Performance Max",color:"#EA4335",
+     strength:"Przechwytuje intencje zakupowa. Ktos szuka co na brak pradu, lapiesz go w wyszukiwarce. Lokalizacja ustawiana po powiecie lub wojewodztwie.",
+     campaigns:[
+       {type:"react",tag:"Reaktywna",title:"Intencja po nawalnicy",kv:[
+         ["Geo","Powiat pulawski i sasiednie"],
+         ["Typ","Search plus Performance Max"],
+         ["Slowa kluczowe","zestaw awaryjny, powerbank, latarka awaryjna, co na brak pradu, woda na zapas"],
+         ["Budzet","Wysoki, stawki podbite na czas zdarzenia"],
+         ["Przekaz","Zestaw 72h gotowy do domu, wysylka od reki"],
+       ]},
+       {type:"pre",tag:"Wyprzedzajaca",title:"Frazy ostrzegawcze",kv:[
+         ["Geo","Wojewodztwo lubelskie"],
+         ["Typ","Search plus Demand Gen"],
+         ["Slowa kluczowe","jak przygotowac sie na brak pradu, lista na blackout, plecak ewakuacyjny, zapasy na 72h"],
+         ["Budzet","Sredni"],
+         ["Przekaz","Sprawdz, czego brakuje Ci na wypadek braku pradu"],
+       ]},
+     ]},
+    {key:"tiktok",name:"TikTok Ads",sub:"Spark Ads + wideo",color:"#111111",
+     strength:"Zasieg i swiadomosc, mlodsza grupa, format wideo. Najlepsze do kampanii wyprzedzajacej i edukacyjnej oraz jazdy na trendzie pogodowym, z zachowaniem taktu.",
+     campaigns:[
+       {type:"pre",tag:"Wyprzedzajaca",title:"Edukacja i trend pogodowy",kv:[
+         ["Geo","Region lubelski (targ. regionalny)"],
+         ["Format","Spark Ads, pionowe wideo 15 do 30s, UGC"],
+         ["Odbiorca","18 do 45 lat"],
+         ["Cel","Zasieg i ruch na strone"],
+         ["Kreacja","3 rzeczy, ktore warto miec zanim zniknie prad"],
+         ["Przekaz","Gotowosc to spokoj, sprawdz swoj zestaw"],
+       ]},
+       {type:"react",tag:"Reaktywna",title:"Po nawalnicy (ostroznie)",kv:[
+         ["Geo","Region lubelski"],
+         ["Format","Krotkie wideo poradnikowe, nie epatowac szkodami"],
+         ["Cel","Swiadomosc i remarketing"],
+         ["Uwaga","Flaga wrazliwosci, ton pomocny"],
+       ]},
+     ]},
+  ],
+  gov:`<b>Lead do samorzadu (osobny tor, nie te platformy).</b> 5 sygnalow B2G nie idzie do Meta, Google ani TikTok. To sprzedaz bezposrednia do gmin, ktore wlasnie dostaly srodki z Programu Ochrony Ludnosci i Obrony Cywilnej: <b>Niedrzwica Duza</b> (magazyn OC, 5,3 mln), <b>Leczna</b> (15 mln), <b>Lublin</b> (13,5 mln), <b>pow. chelmski</b>, <b>Opole Lubelskie</b>. Kanaly: mail i telefon do urzedu, LinkedIn, powiazanie z monitoringiem przetargow. Oferta: wyposazenie magazynu OC w zestawy 72h plus pakiety dla mieszkancow.`
+};
+function renderReport(){
+  document.getElementById('reportLead').innerHTML=report.lead;
+  const wrap=document.getElementById('platforms'); wrap.innerHTML='';
+  report.platforms.forEach(p=>{
+    const camps=p.campaigns.map(cm=>{
+      const rows=cm.kv.map(r=>`<div class="k">${r[0]}</div><div class="v">${r[1]}</div>`).join('');
+      return `<div class="camp"><div class="ct"><span class="ptag ${cm.type}">${cm.tag}</span><b>${cm.title}</b></div><div class="kv">${rows}</div></div>`;
+    }).join('');
+    wrap.insertAdjacentHTML('beforeend',
+      `<div class="plat"><div class="head" style="background:${p.color}"><div class="nm">${p.name}</div><div class="sb">${p.sub}</div></div>
+       <div class="strength">${p.strength}</div><div class="body">${camps}</div></div>`);
+  });
+  document.getElementById('govNote').innerHTML=report.gov;
+}
+renderReport();
+
+/* ---------- TABS ---------- */
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===t));
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.getElementById('view-'+t.dataset.tab).classList.add('active');
+  if(t.dataset.tab==='map'){setTimeout(()=>map.invalidateSize(),80);}
+});
+</script>
+</body>
+</html>

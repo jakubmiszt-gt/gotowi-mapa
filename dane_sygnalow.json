@@ -1,0 +1,94 @@
+{
+  "region": "woj. lubelskie",
+  "aktualizacja": "2026-07-27T09:05:00+02:00",
+  "okno_mapy_h": 72,
+  "sygnaly": [
+    {
+      "id": "2026-07-24-imgw-burze",
+      "ts": "2026-07-24T13:19:00+02:00",
+      "prio": "wyprzedzajaca",
+      "score": 72,
+      "title": "Burze i ulewy, ostrzezenie IMGW 1 stopnia dla calego wojewodztwa",
+      "loc": "cale woj. lubelskie",
+      "lat": 51.25,
+      "lon": 22.57,
+      "rec": "Kampania wyprzedzajaca, geo cale wojewodztwo, przekaz: Przygotuj sie zanim uderzy. Budzet sredni (200-500 zl/dzien).",
+      "src": [
+        { "label": "IMGW API", "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo" },
+        { "label": "Lublin112, 24.07", "url": "https://www.lublin112.pl/burze-ulewy-i-grad-na-lubelszczyznie-w-weekend-pogoda-wyraznie-sie-poprawi/" }
+      ]
+    },
+    {
+      "id": "2026-07-24-luw-syreny",
+      "ts": "2026-07-24T09:53:00+02:00",
+      "prio": "lead-samorzad",
+      "score": 75,
+      "title": "Lubelski Urzad Wojewodzki: modulowy system wczesnego ostrzegania, syreny alarmowe",
+      "loc": "Lublin, zasieg wojewodzki",
+      "lat": 51.21,
+      "lon": 22.64,
+      "rec": "Lead B2G: wpisac do archiwum OC, obserwowac czesci i wykonawcow, szukac ofert komplementarnych dla gmin.",
+      "src": [{ "label": "TED 408860-2026", "url": "https://ted.europa.eu/en/notice/-/detail/408860-2026" }]
+    },
+    {
+      "id": "2026-07-23-imgw-ostrzezenie",
+      "ts": "2026-07-23T07:38:00+02:00",
+      "prio": "wyprzedzajaca",
+      "score": 68,
+      "title": "IMGW ostrzega przed burzami w Lubelskiem, mozliwy grad i silne porywy wiatru",
+      "loc": "cale woj. lubelskie",
+      "lat": 51.25,
+      "lon": 22.57,
+      "rec": "Kampania wyprzedzajaca na dobe, geo cale wojewodztwo, przekaz poradnikowy.",
+      "src": [{ "label": "Kurier Lubelski, 23.07", "url": "https://kurierlubelski.pl/imgw-ostrzega-przed-burzami-w-lubelskiem-mozliwy-grad-i-silne-porywy-wiatru/ar/c1p2-29204495" }]
+    },
+    {
+      "id": "2026-07-22-chelm-suw",
+      "ts": "2026-07-22T10:00:00+02:00",
+      "prio": "lead-samorzad",
+      "score": 75,
+      "title": "Gmina Chelm: przetarg na dwie mobilne stacje uzdatniania wody, uplynal termin ofert",
+      "loc": "pow. chelmski, Pokrowka",
+      "lat": 51.14,
+      "lon": 23.47,
+      "rec": "Lead B2G: sledzic rozstrzygniecie i wykonawce, przygotowac wejscie z oferta pakietowa dla mieszkancow.",
+      "src": [{ "label": "e-Zamowienia, BZP 00341788", "url": "https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-e8616ee2-85d8-4628-90fe-3737b57473ae" }]
+    },
+    {
+      "id": "2026-07-22-wody-polskie-limity",
+      "ts": "2026-07-22T14:07:00+02:00",
+      "prio": "swiadomosc",
+      "score": 37,
+      "title": "Wody Polskie przypominaja o limitach poboru wody, kontekst suszy hydrologicznej",
+      "loc": "cale woj. lubelskie",
+      "lat": 51.25,
+      "lon": 22.57,
+      "rec": "Ponizej progu kampanii. Material do tresci edukacyjnych o zapasie wody.",
+      "src": [{ "label": "Lublin112, 22.07", "url": "https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/" }]
+    },
+    {
+      "id": "2026-07-20-nawalnice-skutki",
+      "ts": "2026-07-20T08:45:00+02:00",
+      "prio": "reaktywna",
+      "score": 88,
+      "title": "Skutki nawalnic: 234 wypompowania wody, zalane podziemia szpitala w Bialej Podlaskiej",
+      "loc": "pow. bialski (213 interwencji), krasnicki, chelmski, wlodawski",
+      "lat": 52.03,
+      "lon": 23.12,
+      "rec": "Kampania reaktywna w promieniu 15 km od powiatow dotknietych. Flaga wrazliwosci: ton informacyjno-poradnikowy, bez epatowania.",
+      "src": [{ "label": "Kurier Lubelski, 20.07", "url": "https://kurierlubelski.pl/zalane-posesje-i-podziemia-szpitala-gwaltowne-burze-przeszly-przez-lubelszczyzne-gdzie-strazacy-mieli-najwiecej-pracy/ar/c1p2-29194989" }]
+    },
+    {
+      "id": "2026-07-02-burze-420-interwencji",
+      "ts": "2026-07-02T09:10:00+02:00",
+      "prio": "reaktywna",
+      "score": 84,
+      "title": "420 interwencji strazakow po burzach, zerwane dachy i polamane drzewa",
+      "loc": "cale woj. lubelskie",
+      "lat": 51.25,
+      "lon": 22.57,
+      "rec": "Kampania reaktywna wojewodzka. Bez osob poszkodowanych, przekaz moze byc rzeczowo sprzedazowy.",
+      "src": [{ "label": "Lublin112, 02.07", "url": "https://www.lublin112.pl/juz-ponad-400-interwencji-strazakow-po-burzach-w-lubelskiem-wiatr-zrywal-dachy-i-lamal-drzewa/" }]
+    }
+  ]
+}

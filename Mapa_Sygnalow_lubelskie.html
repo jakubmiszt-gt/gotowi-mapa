@@ -52,7 +52,7 @@
 </head>
 <body>
 <header>
-  <h1>Monitoring regionalny sygnałów reklamowych, województwo lubelskie</h1>
+  <h1 id="tyt">Monitoring sygnałów reklamowych</h1>
   <p id="hdr">Gotowi Teraz</p>
 </header>
 <div class="stale" id="stale"></div>
@@ -63,7 +63,8 @@
 </div>
 
 <section class="view active" id="v-mapa">
-  <div class="bar" id="f-mapa"><strong>Filtr:</strong></div>
+  <div class="bar" id="w-mapa" style="display:none"><strong>Województwo:</strong></div>
+  <div class="bar" id="f-mapa"><strong>Kategoria:</strong></div>
   <div id="map"></div>
   <div class="empty" id="empty-mapa" style="display:none">
     <h3 id="empty-h">Brak świeżych sygnałów</h3>
@@ -80,17 +81,20 @@
 </section>
 
 <section class="view" id="v-arch">
-  <div class="bar" id="f-arch"><strong>Filtr:</strong></div>
+  <div class="bar" id="w-arch" style="display:none"><strong>Województwo:</strong></div>
+  <div class="bar" id="f-arch"><strong>Kategoria:</strong></div>
   <div class="arch" id="arch-body"></div>
   <div class="note" id="note-arch"></div>
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-const DATA = {"region":"woj. lubelskie","aktualizacja":"2026-07-27T09:35:00+02:00","okno_mapy_h":72,"sygnaly":[{"id":"2026-07-24-imgw-burze","ts":"2026-07-24T13:19:00+02:00","prio":"wyprzedzajaca","score":72,"title":"Burze i ulewy, ostrzeżenie IMGW 1 stopnia dla całego województwa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca, geo całe województwo, przekaz: Przygotuj się zanim uderzy. Budżet średni (200-500 zł/dzień).","src":[{"label":"IMGW API","url":"https://danepubliczne.imgw.pl/api/data/warningsmeteo"},{"label":"Lublin112, 24.07","url":"https://www.lublin112.pl/burze-ulewy-i-grad-na-lubelszczyznie-w-weekend-pogoda-wyraznie-sie-poprawi/"}],"wykryto":"2026-07-24T14:30:00+02:00"},{"id":"2026-07-24-luw-syreny","ts":"2026-07-24T09:53:00+02:00","prio":"lead-samorzad","score":75,"title":"Lubelski Urząd Wojewódzki: modułowy system wczesnego ostrzegania, syreny alarmowe","loc":"Lublin, zasięg wojewódzki","lat":51.21,"lon":22.64,"rec":"Lead B2G: wpisać do archiwum OC, obserwować części i wykonawców, szukać ofert komplementarnych dla gmin.","src":[{"label":"TED 408860-2026","url":"https://ted.europa.eu/en/notice/-/detail/408860-2026"}],"wykryto":"2026-07-24T09:53:00+02:00"},{"id":"2026-07-23-imgw-ostrzezenie","ts":"2026-07-23T07:38:00+02:00","prio":"wyprzedzajaca","score":68,"title":"IMGW ostrzega przed burzami w Lubelskiem, możliwy grad i silne porywy wiatru","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca na dobę, geo całe województwo, przekaz poradnikowy.","src":[{"label":"Kurier Lubelski, 23.07","url":"https://kurierlubelski.pl/imgw-ostrzega-przed-burzami-w-lubelskiem-mozliwy-grad-i-silne-porywy-wiatru/ar/c1p2-29204495"}],"wykryto":"2026-07-27T09:05:00+02:00"},{"id":"2026-07-22-chelm-suw","ts":"2026-07-22T10:00:00+02:00","prio":"lead-samorzad","score":75,"title":"Gmina Chełm: przetarg na dwie mobilne stacje uzdatniania wody, upłynął termin ofert","loc":"pow. chełmski, Pokrówka","lat":51.14,"lon":23.47,"rec":"Lead B2G: śledzić rozstrzygnięcie i wykonawcę, przygotować wejście z ofertą pakietową dla mieszkańców.","src":[{"label":"e-Zamówienia, BZP 00341788","url":"https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-e8616ee2-85d8-4628-90fe-3737b57473ae"}],"wykryto":"2026-07-24T14:30:00+02:00","termin":"2026-07-22T10:00:00+02:00"},{"id":"2026-07-22-wody-polskie-limity","ts":"2026-07-22T14:07:00+02:00","prio":"swiadomosc","score":37,"title":"Wody Polskie przypominają o limitach poboru wody, kontekst suszy hydrologicznej","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Poniżej progu kampanii. Materiał do treści edukacyjnych o zapasie wody.","src":[{"label":"Lublin112, 22.07","url":"https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/"}],"wykryto":"2026-07-27T09:05:00+02:00"},{"id":"2026-07-20-nawalnice-skutki","ts":"2026-07-20T08:45:00+02:00","prio":"reaktywna","score":88,"title":"Skutki nawałnic: 234 wypompowania wody, zalane podziemia szpitala w Białej Podlaskiej","loc":"pow. bialski (213 interwencji), kraśnicki, chełmski, włodawski","lat":52.03,"lon":23.12,"rec":"Kampania reaktywna w promieniu 15 km od powiatów dotkniętych. Flaga wrażliwości: ton informacyjno-poradnikowy, bez epatowania.","src":[{"label":"Kurier Lubelski, 20.07","url":"https://kurierlubelski.pl/zalane-posesje-i-podziemia-szpitala-gwaltowne-burze-przeszly-przez-lubelszczyzne-gdzie-strazacy-mieli-najwiecej-pracy/ar/c1p2-29194989"}],"wykryto":"2026-07-27T09:05:00+02:00"},{"id":"2026-07-02-burze-420-interwencji","ts":"2026-07-02T09:10:00+02:00","prio":"reaktywna","score":84,"title":"420 interwencji strażaków po burzach, zerwane dachy i połamane drzewa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania reaktywna wojewódzka. Bez osób poszkodowanych, przekaz może być rzeczowo sprzedażowy.","src":[{"label":"Lublin112, 02.07","url":"https://www.lublin112.pl/juz-ponad-400-interwencji-strazakow-po-burzach-w-lubelskiem-wiatr-zrywal-dachy-i-lamal-drzewa/"}],"wykryto":"2026-07-27T09:05:00+02:00"}],"retencja_dni":90,"promien_geo_km":15};
+const DATA = {"region":"woj. lubelskie","aktualizacja":"2026-07-27T09:35:00+02:00","okno_mapy_h":72,"sygnaly":[{"id":"2026-07-24-imgw-burze","ts":"2026-07-24T13:19:00+02:00","prio":"wyprzedzajaca","score":72,"title":"Burze i ulewy, ostrzeżenie IMGW 1 stopnia dla całego województwa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca, geo całe województwo, przekaz: Przygotuj się zanim uderzy. Budżet średni (200-500 zł/dzień).","src":[{"label":"IMGW API","url":"https://danepubliczne.imgw.pl/api/data/warningsmeteo"},{"label":"Lublin112, 24.07","url":"https://www.lublin112.pl/burze-ulewy-i-grad-na-lubelszczyznie-w-weekend-pogoda-wyraznie-sie-poprawi/"}],"wykryto":"2026-07-24T14:30:00+02:00"},{"id":"2026-07-24-luw-syreny","ts":"2026-07-24T09:53:00+02:00","prio":"lead-samorzad","score":75,"title":"Lubelski Urząd Wojewódzki: modułowy system wczesnego ostrzegania, syreny alarmowe","loc":"Lublin, zasięg wojewódzki","lat":51.21,"lon":22.64,"rec":"Lead B2G: wpisać do archiwum OC, obserwować części i wykonawców, szukać ofert komplementarnych dla gmin.","src":[{"label":"TED 408860-2026","url":"https://ted.europa.eu/en/notice/-/detail/408860-2026"}],"wykryto":"2026-07-24T09:53:00+02:00"},{"id":"2026-07-23-imgw-ostrzezenie","ts":"2026-07-23T07:38:00+02:00","prio":"wyprzedzajaca","score":68,"title":"IMGW ostrzega przed burzami w Lubelskiem, możliwy grad i silne porywy wiatru","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca na dobę, geo całe województwo, przekaz poradnikowy.","src":[{"label":"Kurier Lubelski, 23.07","url":"https://kurierlubelski.pl/imgw-ostrzega-przed-burzami-w-lubelskiem-mozliwy-grad-i-silne-porywy-wiatru/ar/c1p2-29204495"}],"wykryto":"2026-07-27T09:05:00+02:00"},{"id":"2026-07-22-chelm-suw","ts":"2026-07-22T10:00:00+02:00","prio":"lead-samorzad","score":75,"title":"Gmina Chełm: przetarg na dwie mobilne stacje uzdatniania wody, upłynął termin ofert","loc":"pow. chełmski, Pokrówka","lat":51.14,"lon":23.47,"rec":"Lead B2G: śledzić rozstrzygnięcie i wykonawcę, przygotować wejście z ofertą pakietową dla mieszkańców.","src":[{"label":"e-Zamówienia, BZP 00341788","url":"https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-e8616ee2-85d8-4628-90fe-3737b57473ae"}],"wykryto":"2026-07-24T14:30:00+02:00","termin":"2026-07-22T10:00:00+02:00"},{"id":"2026-07-22-wody-polskie-limity","ts":"2026-07-22T14:07:00+02:00","prio":"swiadomosc","score":37,"title":"Wody Polskie przypominają o limitach poboru wody, kontekst suszy hydrologicznej","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Poniżej progu kampanii. Materiał do treści edukacyjnych o zapasie wody.","src":[{"label":"Lublin112, 22.07","url":"https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/"}],"wykryto":"2026-07-27T09:05:00+02:00"},{"id":"2026-07-20-nawalnice-skutki","ts":"2026-07-20T08:45:00+02:00","prio":"reaktywna","score":88,"title":"Skutki nawałnic: 234 wypompowania wody, zalane podziemia szpitala w Białej Podlaskiej","loc":"pow. bialski (213 interwencji), kraśnicki, chełmski, włodawski","lat":52.03,"lon":23.12,"rec":"Kampania reaktywna w promieniu 15 km od powiatów dotkniętych. Flaga wrażliwości: ton informacyjno-poradnikowy, bez epatowania.","src":[{"label":"Kurier Lubelski, 20.07","url":"https://kurierlubelski.pl/zalane-posesje-i-podziemia-szpitala-gwaltowne-burze-przeszly-przez-lubelszczyzne-gdzie-strazacy-mieli-najwiecej-pracy/ar/c1p2-29194989"}],"wykryto":"2026-07-27T09:05:00+02:00"},{"id":"2026-07-02-burze-420-interwencji","ts":"2026-07-02T09:10:00+02:00","prio":"reaktywna","score":84,"title":"420 interwencji strażaków po burzach, zerwane dachy i połamane drzewa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania reaktywna wojewódzka. Bez osób poszkodowanych, przekaz może być rzeczowo sprzedażowy.","src":[{"label":"Lublin112, 02.07","url":"https://www.lublin112.pl/juz-ponad-400-interwencji-strazakow-po-burzach-w-lubelskiem-wiatr-zrywal-dachy-i-lamal-drzewa/"}],"wykryto":"2026-07-27T09:05:00+02:00"}],"retencja_dni":90,"promien_geo_km":15,"centrum":[51.25,22.9],"zoom":8,"tytul":"Monitoring regionalny sygnałów reklamowych, województwo lubelskie"};
 const COLORS={reaktywna:"#C0392B",wyprzedzajaca:"#E8A200",swiadomosc:"#7F8C8D","lead-samorzad":"#2E6DA4"};
 const LABELS={reaktywna:"REKLAMA REAKTYWNA",wyprzedzajaca:"REKLAMA WYPRZEDZAJĄCA",swiadomosc:"BUDOWANIE ŚWIADOMOŚCI","lead-samorzad":"LEAD DO SAMORZĄDU"};
 const NAZWY={all:"Wszystkie",reaktywna:"Reaktywna",wyprzedzajaca:"Wyprzedzająca",swiadomosc:"Świadomość","lead-samorzad":"Lead do samorządu"};
+document.getElementById('tyt').textContent = DATA.tytul;
+document.title = DATA.tytul + ' | Gotowi Teraz';
 const OKNO_H   = DATA.okno_mapy_h;
 const RETENCJA = DATA.retencja_dni;
 const PROMIEN  = DATA.promien_geo_km;
@@ -169,6 +173,25 @@ function buildFiltry(boxId, zbior, cb){
 }
 
 /* ---------- mapa ---------- */
+let wojMapa='all', wojArch='all';
+function buildWoj(boxId, zbior, cb){
+  const lista = [...new Set(zbior.map(s=>s.woj).filter(Boolean))].sort();
+  if(lista.length < 2) return;                     /* jedno wojewodztwo: filtr zbedny */
+  const box = document.getElementById(boxId);
+  box.style.display = 'flex';
+  ['all', ...lista].forEach(w => {
+    const n = w==='all' ? zbior.length : zbior.filter(s=>s.woj===w).length;
+    const b = document.createElement('button');
+    b.className = 'fb' + (w==='all'?' active':'');
+    b.textContent = (w==='all' ? 'Cała Polska' : w) + ' (' + n + ')';
+    b.addEventListener('click', () => {
+      box.querySelectorAll('.fb').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); cb(w);
+    });
+    box.appendChild(b);
+  });
+}
+
 let map=null, warstwa=null;
 function promien(s){ return Math.max(8, 8 + (s-55)/45*16); }
 function liniaCzasu(s){
@@ -177,10 +200,12 @@ function liniaCzasu(s){
   if(s.termin)  t += '<br><strong>Termin ofert:</strong> ' + fmtDT(new Date(s.termin));
   return t;
 }
+let katMapa='all';
 function rysujMape(k){
   if(!map) return;
   warstwa.clearLayers();
-  swieze.filter(s => k==='all' || s.prio===k).forEach(s => {
+  katMapa = (k===undefined ? katMapa : k);
+  swieze.filter(s => (katMapa==='all' || s.prio===katMapa) && (wojMapa==='all' || s.woj===wojMapa)).forEach(s => {
     if(s.prio !== 'lead-samorzad'){
       L.circle([s.lat,s.lon],{radius:(s.promien_km||PROMIEN)*1000,color:COLORS[s.prio],weight:1,
         opacity:.5,fillColor:COLORS[s.prio],fillOpacity:.10}).addTo(warstwa);
@@ -197,18 +222,21 @@ if(swieze.length === 0){
   document.getElementById('map').style.display='none';
   document.getElementById('empty-mapa').style.display='block';
 } else {
-  map = L.map('map').setView([51.25,22.9],8);
+  map = L.map('map').setView(DATA.centrum, DATA.zoom);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap'}).addTo(map);
   warstwa = L.layerGroup().addTo(map);
   rysujMape('all');
 }
 buildFiltry('f-mapa', swieze, rysujMape);
+buildWoj('w-mapa', swieze, w => { wojMapa = w; rysujMape(); });
 
 /* ---------- archiwum ---------- */
+let katArch='all';
 function rysujArchiwum(k){
   const box = document.getElementById('arch-body');
   box.innerHTML = '';
-  const lista = stare.filter(s => k==='all' || s.prio===k);
+  katArch = (k===undefined ? katArch : k);
+  const lista = stare.filter(s => (katArch==='all' || s.prio===katArch) && (wojArch==='all' || s.woj===wojArch));
   if(lista.length === 0){
     box.innerHTML = '<div class="empty"><h3>Brak wpisów w archiwum dla tego filtru</h3><p>Zmień filtr kategorii.</p></div>';
     return;
@@ -239,6 +267,7 @@ function rysujArchiwum(k){
   });
 }
 buildFiltry('f-arch', stare, rysujArchiwum);
+buildWoj('w-arch', stare, w => { wojArch = w; rysujArchiwum(); });
 rysujArchiwum('all');
 
 /* ---------- zakladki ---------- */

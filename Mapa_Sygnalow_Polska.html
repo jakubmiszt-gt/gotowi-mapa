@@ -1,32 +1,4 @@
-#!/usr/bin/env python3
-"""Buduje strone monitoringu regionalnego Gotowi Teraz z pliku dane_sygnalow.json.
-
-Zasady:
-  - Mapa pokazuje sygnaly swieze. Sygnal reklamowy jest swiezy, gdy jego data
-    zdarzenia (ts) miesci sie w oknie okno_mapy_h. Lead do samorzadu jest swiezy,
-    dopoki nie minal termin skladania ofert (pole termin); bez terminu dziala
-    zwykla regula okna.
-  - Starsze sygnaly trafiaja do zakladki Archiwum, pogrupowane po dniach malejaco,
-    ograniczone do retencja_dni. Nic nie jest kasowane z pliku danych.
-  - Kazdy sygnal moze miec pole wykryto (kiedy narzedzie go znalazlo). Jest
-    pokazywane obok daty zdarzenia.
-Uzycie: python3 build_mapa.py dane_sygnalow.json Mapa_Sygnalow_lubelskie.html
-"""
-import json, sys, datetime, pathlib
-
-SRC = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else 'dane_sygnalow.json')
-OUT = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else 'Mapa_Sygnalow_lubelskie.html')
-
-data = json.loads(SRC.read_text(encoding='utf-8'))
-data.setdefault('okno_mapy_h', 72)
-data.setdefault('retencja_dni', 90)
-data.setdefault('promien_geo_km', 15)
-data.setdefault('centrum', [51.25, 22.9])
-data.setdefault('zoom', 8)
-data.setdefault('tytul', 'Monitoring regionalny sygnałów reklamowych, województwo lubelskie')
-payload = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
-
-TPL = r"""<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="utf-8">
@@ -117,7 +89,7 @@ TPL = r"""<!DOCTYPE html>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-const DATA = __DATA__;
+const DATA = {"zakres":"Polska","tytul":"Monitoring krajowy sygnałów reklamowych, Polska","aktualizacja":"2026-07-27T13:30:00+02:00","okno_mapy_h":72,"retencja_dni":90,"promien_geo_km":15,"centrum":[52.0,19.4],"zoom":6,"sygnaly":[{"id":"2026-07-24-imgw-burze","ts":"2026-07-24T13:19:00+02:00","prio":"wyprzedzajaca","score":72,"title":"Burze i ulewy, ostrzeżenie IMGW 1 stopnia dla całego województwa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca, geo całe województwo, przekaz: Przygotuj się zanim uderzy. Budżet średni (200-500 zł/dzień).","src":[{"label":"IMGW API","url":"https://danepubliczne.imgw.pl/api/data/warningsmeteo"},{"label":"Lublin112, 24.07","url":"https://www.lublin112.pl/burze-ulewy-i-grad-na-lubelszczyznie-w-weekend-pogoda-wyraznie-sie-poprawi/"}],"wykryto":"2026-07-24T14:30:00+02:00","woj":"lubelskie"},{"id":"2026-07-24-luw-syreny","ts":"2026-07-24T09:53:00+02:00","prio":"lead-samorzad","score":75,"title":"Lubelski Urząd Wojewódzki: modułowy system wczesnego ostrzegania, syreny alarmowe","loc":"Lublin, zasięg wojewódzki","lat":51.21,"lon":22.64,"rec":"Lead B2G: wpisać do archiwum OC, obserwować części i wykonawców, szukać ofert komplementarnych dla gmin.","src":[{"label":"TED 408860-2026","url":"https://ted.europa.eu/en/notice/-/detail/408860-2026"}],"wykryto":"2026-07-24T09:53:00+02:00","woj":"lubelskie"},{"id":"2026-07-23-imgw-ostrzezenie","ts":"2026-07-23T07:38:00+02:00","prio":"wyprzedzajaca","score":68,"title":"IMGW ostrzega przed burzami w Lubelskiem, możliwy grad i silne porywy wiatru","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca na dobę, geo całe województwo, przekaz poradnikowy.","src":[{"label":"Kurier Lubelski, 23.07","url":"https://kurierlubelski.pl/imgw-ostrzega-przed-burzami-w-lubelskiem-mozliwy-grad-i-silne-porywy-wiatru/ar/c1p2-29204495"}],"wykryto":"2026-07-27T09:05:00+02:00","woj":"lubelskie"},{"id":"2026-07-22-chelm-suw","ts":"2026-07-22T10:00:00+02:00","prio":"lead-samorzad","score":75,"title":"Gmina Chełm: przetarg na dwie mobilne stacje uzdatniania wody, upłynął termin ofert","loc":"pow. chełmski, Pokrówka","lat":51.14,"lon":23.47,"rec":"Lead B2G: śledzić rozstrzygnięcie i wykonawcę, przygotować wejście z ofertą pakietową dla mieszkańców.","src":[{"label":"e-Zamówienia, BZP 00341788","url":"https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-e8616ee2-85d8-4628-90fe-3737b57473ae"}],"wykryto":"2026-07-24T14:30:00+02:00","termin":"2026-07-22T10:00:00+02:00","woj":"lubelskie"},{"id":"2026-07-22-wody-polskie-limity","ts":"2026-07-22T14:07:00+02:00","prio":"swiadomosc","score":37,"title":"Wody Polskie przypominają o limitach poboru wody, kontekst suszy hydrologicznej","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Poniżej progu kampanii. Materiał do treści edukacyjnych o zapasie wody.","src":[{"label":"Lublin112, 22.07","url":"https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/"}],"wykryto":"2026-07-27T09:05:00+02:00","woj":"lubelskie"},{"id":"2026-07-20-nawalnice-skutki","ts":"2026-07-20T08:45:00+02:00","prio":"reaktywna","score":88,"title":"Skutki nawałnic: 234 wypompowania wody, zalane podziemia szpitala w Białej Podlaskiej","loc":"pow. bialski (213 interwencji), kraśnicki, chełmski, włodawski","lat":52.03,"lon":23.12,"rec":"Kampania reaktywna w promieniu 15 km od powiatów dotkniętych. Flaga wrażliwości: ton informacyjno-poradnikowy, bez epatowania.","src":[{"label":"Kurier Lubelski, 20.07","url":"https://kurierlubelski.pl/zalane-posesje-i-podziemia-szpitala-gwaltowne-burze-przeszly-przez-lubelszczyzne-gdzie-strazacy-mieli-najwiecej-pracy/ar/c1p2-29194989"}],"wykryto":"2026-07-27T09:05:00+02:00","woj":"lubelskie"},{"id":"2026-07-02-burze-420-interwencji","ts":"2026-07-02T09:10:00+02:00","prio":"reaktywna","score":84,"title":"420 interwencji strażaków po burzach, zerwane dachy i połamane drzewa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania reaktywna wojewódzka. Bez osób poszkodowanych, przekaz może być rzeczowo sprzedażowy.","src":[{"label":"Lublin112, 02.07","url":"https://www.lublin112.pl/juz-ponad-400-interwencji-strazakow-po-burzach-w-lubelskiem-wiatr-zrywal-dachy-i-lamal-drzewa/"}],"wykryto":"2026-07-27T09:05:00+02:00","woj":"lubelskie"}]};
 const COLORS={reaktywna:"#C0392B",wyprzedzajaca:"#E8A200",swiadomosc:"#7F8C8D","lead-samorzad":"#2E6DA4"};
 const LABELS={reaktywna:"REKLAMA REAKTYWNA",wyprzedzajaca:"REKLAMA WYPRZEDZAJĄCA",swiadomosc:"BUDOWANIE ŚWIADOMOŚCI","lead-samorzad":"LEAD DO SAMORZĄDU"};
 const NAZWY={all:"Wszystkie",reaktywna:"Reaktywna",wyprzedzajaca:"Wyprzedzająca",swiadomosc:"Świadomość","lead-samorzad":"Lead do samorządu"};
@@ -309,38 +281,3 @@ document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () =>
 </script>
 </body>
 </html>
-"""
-
-OUT.write_text(TPL.replace('__DATA__', payload), encoding='utf-8')
-
-# index.html tworzony tylko dla strony glownej (flaga --index),
-# zeby przy wielu mapach nie nadpisywac przekierowania
-idx = OUT.parent / 'index.html'
-if '--index' in sys.argv:
-    idx.write_text(
-        '<!DOCTYPE html><html lang="pl"><head><meta charset="utf-8">'
-        '<meta http-equiv="refresh" content="0; url=' + OUT.name + '">'
-        '<link rel="canonical" href="' + OUT.name + '">'
-        '<title>Monitoring | Gotowi Teraz</title></head>'
-        '<body><p>Przekierowanie do <a href="' + OUT.name + '">mapy sygnałów</a>.</p></body></html>',
-        encoding='utf-8')
-
-# raport kontrolny
-now = datetime.datetime.now(datetime.timezone.utc).astimezone()
-prog = now - datetime.timedelta(hours=data['okno_mapy_h'])
-gran = now - datetime.timedelta(days=data['retencja_dni'])
-def swiezy(s):
-    if s['prio'] == 'lead-samorzad' and s.get('termin'):
-        return datetime.datetime.fromisoformat(s['termin']) >= now
-    return datetime.datetime.fromisoformat(s['ts']) >= prog
-sw = [s for s in data['sygnaly'] if swiezy(s)]
-st = [s for s in data['sygnaly'] if not swiezy(s)]
-st_w = [s for s in st if datetime.datetime.fromisoformat(s['ts']) >= gran]
-print('teraz:', now.strftime('%Y-%m-%d %H:%M %Z'), '| okno:', data['okno_mapy_h'], 'h | retencja:', data['retencja_dni'], 'dni')
-print('NA MAPIE (%d):' % len(sw))
-for s in sw: print('   ', s['ts'][:16], s['prio'], s['score'], ('termin ' + s['termin'][:10]) if s.get('termin') else '', s['title'][:45])
-dni = {}
-for s in st_w: dni.setdefault(s['ts'][:10], []).append(s)
-print('W ARCHIWUM (%d) w %d dniach, poza retencja: %d' % (len(st_w), len(dni), len(st)-len(st_w)))
-for d in sorted(dni, reverse=True): print('   ', d, '->', len(dni[d]))
-print('pliki:', OUT.name, OUT.stat().st_size, 'B' + (' | index.html -> ' + OUT.name if '--index' in sys.argv else ''))

@@ -1,7 +1,8 @@
 {
   "zakres": "Polska",
   "tytul": "Monitoring krajowy sygnałów reklamowych, Polska",
-  "aktualizacja": "2026-07-27T15:10:00+02:00",
+  "aktualizacja": "2026-07-27T15:35:00+02:00",
+  "tytul_portal": "Centrum informacji lokalnych, Polska",
   "okno_mapy_h": 72,
   "retencja_dni": 90,
   "promien_geo_km": 15,
@@ -11,6 +12,122 @@
   ],
   "zoom": 6,
   "sygnaly": [
+    {
+      "id": "2026-07-27-podtopienia-osobnica-jasielski",
+      "ts": "2026-07-27T02:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "woj": "podkarpackie",
+      "prio": "reaktywna",
+      "score": 76,
+      "title": "Nocne ulewy nad powiatem jasielskim, podtopienia, najpoważniejsze w Osobnicy",
+      "loc": "Osobnica i okolice, pow. jasielski",
+      "lat": 49.78,
+      "lon": 21.38,
+      "rec": "Zdarzenie z ostatniej doby, woda wciąż usuwana. Kampania reaktywna w promieniu 15 km, przekaz o zabezpieczeniu domu i zapasie na wypadek odcięcia prądu lub wody. Budżet średni.",
+      "src": [
+        {
+          "label": "Rzeszów News, 27.07",
+          "url": "https://rzeszow-news.pl/burze-i-lokalne-podtopienia-na-podkarpaciu-strazacy-interweniowali-blisko-200-razy-zdjecia/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-27-wylaczenia-wody-wroclaw",
+      "ts": "2026-07-27T08:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "trwa_do": "2026-07-28T23:59:00+02:00",
+      "woj": "dolnośląskie",
+      "prio": "wyprzedzajaca",
+      "score": 58,
+      "title": "Wrocław: zapowiedziane wyłączenia wody na wskazanych ulicach 27 i 28 lipca",
+      "loc": "Wrocław, wybrane ulice",
+      "lat": 51.11,
+      "lon": 17.04,
+      "rec": "Zapowiedziana przerwa, mieszkańcy szukają informacji z wyprzedzeniem. Wąski geo-fence na wskazane ulice, przekaz: zapas wody pod ręką zanim zakręcą. Budżet niski.",
+      "src": [
+        {
+          "label": "wroclaw.pl, awaria wody",
+          "url": "https://www.wroclaw.pl/dla-mieszkanca/awaria-wody-wroclaw"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-24-zakaz-podlewania-liw",
+      "ts": "2026-07-24T09:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "trwa_do": "2026-08-31T23:59:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "swiadomosc",
+      "score": 60,
+      "title": "Gmina Liw: bezwzględny zakaz podlewania ogrodów i napełniania basenów w każdy weekend do końca sierpnia",
+      "loc": "gmina Liw, pow. węgrowski",
+      "lat": 52.4,
+      "lon": 22.03,
+      "rec": "Zakaz cykliczny, obowiązuje od piątku do niedzieli aż do 31 sierpnia, więc temat wraca co tydzień. Treści edukacyjne o gospodarowaniu wodą w domu, remarketing w piątki. Budżet niski.",
+      "src": [
+        {
+          "label": "topagrar, lipiec 2026",
+          "url": "https://www.topagrar.pl/articles/ogrod/zakaz-podlewania-juz-obowiazuje-kolejne-gminy-ograniczaja-korzystanie-z-wody-2687052"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-22-awaria-wodociagu-rzekun",
+      "ts": "2026-07-22T09:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "reaktywna",
+      "score": 62,
+      "title": "Awaria sieci wodociągowej w Rzekuniu, mieszkańcy części ulic bez wody",
+      "loc": "Rzekuń, pow. ostrołęcki",
+      "lat": 53.05,
+      "lon": 21.63,
+      "rec": "Sygnał wprost produktowy. Geo-fence na gminę, przekaz: woda na 72 godziny w domu. Data z artykułu portalu, doprecyzować przy powtórce awarii.",
+      "src": [
+        {
+          "label": "eOstrołęka",
+          "url": "https://www.eostroleka.pl/awaria-sieci-wodociagowej-w-rzekuniu-mieszkancy-czesci-ulic-bez-wody,art130121.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-20-zakaz-podlewania-zareby-koscielne",
+      "ts": "2026-07-20T10:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "swiadomosc",
+      "score": 48,
+      "title": "Gmina Zaręby Kościelne wprowadza zakaz podlewania na czas suszy",
+      "loc": "gmina Zaręby Kościelne, pow. ostrowski",
+      "lat": 52.68,
+      "lon": 22.13,
+      "rec": "Kolejna gmina mazowiecka z formalnym zakazem. Materiał do treści o zapasie wody, nie do kampanii sprzedażowej. Budżet niski.",
+      "src": [
+        {
+          "label": "Gmina Zaręby Kościelne",
+          "url": "https://zareby-kosc.pl/aktualnosci/zakaz-podlewania-na-terenie-gminy-w-okresie-suszy.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-06-25-beczkowozy-radzymin",
+      "ts": "2026-06-25T12:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "reaktywna",
+      "score": 79,
+      "title": "Radzymin: całkowity zakaz podlewania z sieci, gmina rozstawiła beczkowozy z wodą dla mieszkańców",
+      "loc": "gmina Radzymin, pow. wołomiński",
+      "lat": 52.42,
+      "lon": 21.19,
+      "rec": "Najmocniejszy sygnał produktowy w mazowieckiem: mieszkańcy fizycznie chodzą po wodę do beczkowozu. Geo-fence na gminę i sąsiednie, przekaz o zapasie wody w domu. Zakaz wprowadzony 25.06, sprawdzić przy przebiegu czy nadal obowiązuje.",
+      "src": [
+        {
+          "label": "Życie Powiatu na Mazowszu",
+          "url": "https://www.zyciepw.pl/radzymin-lokalizacja-beczkowozow-i-komunikat-w-sprawie-ograniczen-w-korzystaniu-z-wody-na-terenie-gminy"
+        }
+      ]
+    },
     {
       "id": "2026-07-26-jubileusz-osp-zynie",
       "ts": "2026-07-26T14:00:00+02:00",

@@ -1,7 +1,7 @@
 {
   "zakres": "Polska",
   "tytul": "Monitoring krajowy sygnałów reklamowych, Polska",
-  "aktualizacja": "2026-07-27T14:10:00+02:00",
+  "aktualizacja": "2026-07-27T14:40:00+02:00",
   "okno_mapy_h": 72,
   "retencja_dni": 90,
   "promien_geo_km": 15,
@@ -225,6 +225,25 @@
       "woj": "lubelskie"
     },
     {
+      "id": "2026-07-24-pozar-akademik-lodz",
+      "ts": "2026-07-24T12:00:00+02:00",
+      "wykryto": "2026-07-27T14:40:00+02:00",
+      "woj": "łódzkie",
+      "prio": "reaktywna",
+      "score": 78,
+      "title": "Pożar akademika w Łodzi, ewakuowano 50 osób, dziewięć jednostek straży w akcji",
+      "loc": "Łódź",
+      "lat": 51.76,
+      "lon": 19.46,
+      "rec": "Ewakuacja to moment, w którym ludzie wychodzą z domu bez niczego. Przekaz o torbie ewakuacyjnej i dokumentach pod ręką, ton poradnikowy, bez epatowania. Budżet średni.",
+      "src": [
+        {
+          "label": "Goniec, 24.07",
+          "url": "https://goniec.pl/potezny-pozar-w-polskim-miescie-dym-widac-z-wielu-kilometrow-ewakuowano-50-osob-mt-wpd-240726"
+        }
+      ]
+    },
+    {
       "id": "2026-07-24-luw-syreny",
       "ts": "2026-07-24T09:53:00+02:00",
       "prio": "lead-samorzad",
@@ -378,6 +397,25 @@
       ]
     },
     {
+      "id": "2026-07-20-woda-wachock",
+      "ts": "2026-07-20T10:00:00+02:00",
+      "wykryto": "2026-07-27T14:40:00+02:00",
+      "woj": "świętokrzyskie",
+      "prio": "reaktywna",
+      "score": 74,
+      "title": "Woda nie nadaje się do picia w gminie Wąchock: bakterie grupy coli i enterokoki w próbkach",
+      "loc": "Wąchock, Marcinków, Rataje, pow. starachowicki",
+      "lat": 51.07,
+      "lon": 21.01,
+      "rec": "Sygnał produktowy. Geo-fence na gminę i sąsiednie miejscowości, przekaz: Woda butelkowana i zapas na 72 godziny. Budżet średni.",
+      "src": [
+        {
+          "label": "Echo Dnia Świętokrzyskie",
+          "url": "https://echodnia.eu/swietokrzyskie/woda-nie-nadaje-sie-do-picia-w-gminie-wachock-sanepid-wydal-pilny-komunikat-dla-mieszkancow-trzech-miejscowosci/ar/c1p2-29203513"
+        }
+      ]
+    },
+    {
       "id": "2026-07-20-nawalnice-skutki",
       "ts": "2026-07-20T08:45:00+02:00",
       "prio": "reaktywna",
@@ -395,6 +433,84 @@
       ],
       "wykryto": "2026-07-27T09:05:00+02:00",
       "woj": "lubelskie"
+    },
+    {
+      "id": "2026-07-15-pozar-strzelin",
+      "ts": "2026-07-15T05:40:00+02:00",
+      "wykryto": "2026-07-27T14:40:00+02:00",
+      "woj": "dolnośląskie",
+      "prio": "reaktywna",
+      "score": 72,
+      "title": "Pożar bloku w Strzelinie, ewakuowano 20 osób z dwunastu mieszkań",
+      "loc": "Strzelin, pow. strzeliński",
+      "lat": 50.78,
+      "lon": 17.06,
+      "rec": "Materiał do remarketingu lokalnego, przekaz o torbie ewakuacyjnej. Flaga wrażliwości: ton informacyjny.",
+      "src": [
+        {
+          "label": "TVP Wrocław",
+          "url": "https://wroclaw.tvp.pl/94349645/pozar-w-strzelinie-ogien-objal-elewacje-budynku-24-osoby-ewakuowane"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-10-woda-milomlyn",
+      "ts": "2026-07-10T12:00:00+02:00",
+      "wykryto": "2026-07-27T14:40:00+02:00",
+      "trwa_do": "2026-07-31T23:59:00+02:00",
+      "woj": "warmińsko-mazurskie",
+      "prio": "reaktywna",
+      "score": 82,
+      "title": "Zakaz picia wody z wodociągu Miłomłyn: zanieczyszczenie mikrobiologiczne, 2458 mieszkańców bez wody zdatnej do spożycia",
+      "loc": "Miłomłyn, Malinnik, Kamieńczyk, pow. ostródzki",
+      "lat": 53.79,
+      "lon": 19.83,
+      "rec": "Sygnał produktowy najwyższej wagi i wciąż aktywny, zakaz obowiązuje do 31.07. Geo-fence 15 km wokół Miłomłyna, przekaz: Zapas wody na 72 godziny w domu. Budżet wysoki, kampania natychmiastowa.",
+      "src": [
+        {
+          "label": "tko.pl, 13.07",
+          "url": "https://tko.pl/379454,2026,07,13,skazona-woda-w-warminsko-mazurskim-sanepid-ostrzega-mieszkancow-i-turystow"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-10-woda-tereszewo",
+      "ts": "2026-07-10T12:00:00+02:00",
+      "wykryto": "2026-07-27T14:40:00+02:00",
+      "trwa_do": "2026-07-17T23:59:00+02:00",
+      "woj": "warmińsko-mazurskie",
+      "prio": "reaktywna",
+      "score": 66,
+      "title": "Zakaz picia wody w ośrodku wypoczynkowym w Tereszewie, decyzja sanepidu w Nowym Mieście Lubawskim",
+      "loc": "Tereszewo, pow. nowomiejski",
+      "lat": 53.44,
+      "lon": 19.63,
+      "rec": "Zakaz wygasł 17.07. Materiał do remarketingu wśród turystów i właścicieli ośrodków, przekaz o zapasie wody na wyjazd.",
+      "src": [
+        {
+          "label": "tko.pl, 13.07",
+          "url": "https://tko.pl/379454,2026,07,13,skazona-woda-w-warminsko-mazurskim-sanepid-ostrzega-mieszkancow-i-turystow"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-07-pozar-elk",
+      "ts": "2026-07-07T23:02:00+02:00",
+      "wykryto": "2026-07-27T14:40:00+02:00",
+      "woj": "warmińsko-mazurskie",
+      "prio": "reaktywna",
+      "score": 68,
+      "title": "Nocny pożar bloku w Ełku, ewakuacja mieszkańców, jedna osoba poszkodowana",
+      "loc": "Ełk, ul. Okulickiego, pow. ełcki",
+      "lat": 53.83,
+      "lon": 22.36,
+      "rec": "Zdarzenie z poszkodowanym: wyłącznie ton informacyjno-poradnikowy, bez przekazu sprzedażowego. Materiał edukacyjny o ewakuacji nocnej.",
+      "src": [
+        {
+          "label": "tko.pl, 08.07",
+          "url": "https://tko.pl/378873,2026,07,08,pozar-w-bloku-ewakuowano-mieszkancow-jedna-osoba-poszkodowana"
+        }
+      ]
     },
     {
       "id": "2026-07-02-burze-420-interwencji",

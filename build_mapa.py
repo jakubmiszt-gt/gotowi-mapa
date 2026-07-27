@@ -144,10 +144,8 @@ function zrodla(s){ return (s.src||[]).map(x => '<a href="'+x.url+'" target="_bl
 
 /* swiezosc: lead zyje do terminu skladania ofert, reszta wg okna */
 function czySwiezy(s){
-  if(s.prio === 'lead-samorzad' && s.termin){
-    const t = new Date(s.termin);
-    return t >= now;
-  }
+  if(s.trwa_do){ return new Date(s.trwa_do) >= now; }        /* zdarzenie ciagle, np. zakaz picia wody */
+  if(s.prio === 'lead-samorzad' && s.termin){ return new Date(s.termin) >= now; }
   return s.d >= prog;
 }
 
@@ -227,6 +225,7 @@ function liniaCzasu(s){
   let t = '<strong>Zdarzenie:</strong> ' + fmtDT(s.d);
   if(s.wykryto) t += '<br><strong>Wykryto:</strong> ' + fmtDT(new Date(s.wykryto));
   if(s.termin)  t += '<br><strong>Termin ofert:</strong> ' + fmtDT(new Date(s.termin));
+  if(s.trwa_do) t += '<br><strong>Obowiazuje do:</strong> ' + fmtDT(new Date(s.trwa_do));
   return t;
 }
 let katMapa='all';
@@ -285,6 +284,7 @@ function rysujArchiwum(k){
       let meta = fmtDT(s.d);
       if(s.wykryto) meta += ' &nbsp;|&nbsp; wykryto ' + fmtD(new Date(s.wykryto));
       if(s.termin)  meta += ' &nbsp;|&nbsp; termin ofert ' + fmtD(new Date(s.termin));
+      if(s.trwa_do) meta += ' &nbsp;|&nbsp; obowiązywało do ' + fmtD(new Date(s.trwa_do));
       c.innerHTML = '<h3>'+s.title+'</h3>'+
         '<div class="meta"><span class="badge" style="background:'+COLORS[s.prio]+'">'+LABELS[s.prio]+
         ' | SCORE '+s.score+'</span> '+meta+' &nbsp;|&nbsp; '+s.loc+'</div>'+
@@ -331,6 +331,8 @@ now = datetime.datetime.now(datetime.timezone.utc).astimezone()
 prog = now - datetime.timedelta(hours=data['okno_mapy_h'])
 gran = now - datetime.timedelta(days=data['retencja_dni'])
 def swiezy(s):
+    if s.get('trwa_do'):
+        return datetime.datetime.fromisoformat(s['trwa_do']) >= now
     if s['prio'] == 'lead-samorzad' and s.get('termin'):
         return datetime.datetime.fromisoformat(s['termin']) >= now
     return datetime.datetime.fromisoformat(s['ts']) >= prog

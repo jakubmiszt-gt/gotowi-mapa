@@ -255,6 +255,10 @@ function rysujMape(lista){
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
     warstwa=L.layerGroup().addTo(map);
+    // Kontener mapy siedzi w siatce CSS i ma finalny rozmiar dopiero po ulozeniu
+    // strony. Bez tego Leaflet liczy zly rozmiar i nie pobiera kafelkow.
+    setTimeout(()=>map.invalidateSize(),120);
+    window.addEventListener('resize',()=>map.invalidateSize());
   }
   warstwa.clearLayers();
   const pkt=[];
@@ -275,7 +279,7 @@ function rysujMape(lista){
     });
     s._marker=m; pkt.push([s.lat,s.lon]);
   });
-  if(pkt.length) map.fitBounds(pkt,{padding:[45,45],maxZoom:9});
+  if(pkt.length){ map.invalidateSize(); map.fitBounds(pkt,{padding:[45,45],maxZoom:9}); }
   document.getElementById('maphint').textContent =
     pkt.length+' z '+lista.length+' pozycji ma współrzędne. Klik w marker podświetla wpis na liście.';
 }

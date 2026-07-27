@@ -52,7 +52,7 @@
 </head>
 <body>
 <header>
-  <h1>Monitoring regionalny sygnalow reklamowych, wojewodztwo lubelskie</h1>
+  <h1>Monitoring regionalny sygnałów reklamowych, województwo lubelskie</h1>
   <p id="hdr">Gotowi Teraz</p>
 </header>
 
@@ -65,17 +65,17 @@
   <div class="bar" id="f-mapa"><strong>Filtr:</strong></div>
   <div id="map"></div>
   <div class="empty" id="empty-mapa" style="display:none">
-    <h3>Brak sygnalow w ostatnich 72 godzinach</h3>
-    <p>To normalny stan, gdy w regionie nie dzieje sie nic, co uzasadnia kampanie. Starsze sygnaly znajdziesz w zakladce Archiwum.</p>
+    <h3>Brak sygnałów w ostatnich 72 godzinach</h3>
+    <p>To normalny stan, gdy w regionie nie dzieje się nic, co uzasadnia kampanię. Starsze sygnały znajdziesz w zakładce Archiwum.</p>
   </div>
   <div class="legend">
     <span class="dot" style="background:#C0392B"></span><strong>Reklama reaktywna</strong>: kryzys trwa teraz &nbsp;
-    <span class="dot" style="background:#E8A200"></span><strong>Reklama wyprzedzajaca</strong>: ostrzezenie, kampania zanim uderzy &nbsp;
-    <span class="dot" style="background:#7F8C8D"></span><strong>Budowanie swiadomosci</strong>: dluzszy trend &nbsp;
-    <span class="dot" style="background:#2E6DA4"></span><strong>Lead do samorzadu</strong>: sprzedaz do gminy, nie reklama konsumencka.
-    Wielkosc markera odpowiada sile sygnalu (Signal Score).
+    <span class="dot" style="background:#E8A200"></span><strong>Reklama wyprzedzająca</strong>: ostrzeżenie, kampania zanim uderzy &nbsp;
+    <span class="dot" style="background:#7F8C8D"></span><strong>Budowanie świadomości</strong>: dłuższy trend &nbsp;
+    <span class="dot" style="background:#2E6DA4"></span><strong>Lead do samorządu</strong>: sprzedaż do gminy, nie reklama konsumencka.
+    Wielkość markera odpowiada sile sygnału (Signal Score).
   </div>
-  <div class="note">Na mapie sa wylacznie sygnaly z ostatnich 72 godzin. Po tym czasie sygnal automatycznie przechodzi do Archiwum, gdzie jest uporzadkowany wedlug dni.</div>
+  <div class="note">Na mapie są wyłącznie sygnały z ostatnich 72 godzin. Po tym czasie sygnał automatycznie przechodzi do Archiwum, gdzie jest uporządkowany według dni.</div>
 </section>
 
 <section class="view" id="v-arch">
@@ -85,10 +85,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-const DATA = {"region":"woj. lubelskie","aktualizacja":"2026-07-27T09:05:00+02:00","okno_mapy_h":72,"sygnaly":[{"id":"2026-07-24-imgw-burze","ts":"2026-07-24T13:19:00+02:00","prio":"wyprzedzajaca","score":72,"title":"Burze i ulewy, ostrzezenie IMGW 1 stopnia dla calego wojewodztwa","loc":"cale woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzajaca, geo cale wojewodztwo, przekaz: Przygotuj sie zanim uderzy. Budzet sredni (200-500 zl/dzien).","src":[{"label":"IMGW API","url":"https://danepubliczne.imgw.pl/api/data/warningsmeteo"},{"label":"Lublin112, 24.07","url":"https://www.lublin112.pl/burze-ulewy-i-grad-na-lubelszczyznie-w-weekend-pogoda-wyraznie-sie-poprawi/"}]},{"id":"2026-07-24-luw-syreny","ts":"2026-07-24T09:53:00+02:00","prio":"lead-samorzad","score":75,"title":"Lubelski Urzad Wojewodzki: modulowy system wczesnego ostrzegania, syreny alarmowe","loc":"Lublin, zasieg wojewodzki","lat":51.21,"lon":22.64,"rec":"Lead B2G: wpisac do archiwum OC, obserwowac czesci i wykonawcow, szukac ofert komplementarnych dla gmin.","src":[{"label":"TED 408860-2026","url":"https://ted.europa.eu/en/notice/-/detail/408860-2026"}]},{"id":"2026-07-23-imgw-ostrzezenie","ts":"2026-07-23T07:38:00+02:00","prio":"wyprzedzajaca","score":68,"title":"IMGW ostrzega przed burzami w Lubelskiem, mozliwy grad i silne porywy wiatru","loc":"cale woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzajaca na dobe, geo cale wojewodztwo, przekaz poradnikowy.","src":[{"label":"Kurier Lubelski, 23.07","url":"https://kurierlubelski.pl/imgw-ostrzega-przed-burzami-w-lubelskiem-mozliwy-grad-i-silne-porywy-wiatru/ar/c1p2-29204495"}]},{"id":"2026-07-22-chelm-suw","ts":"2026-07-22T10:00:00+02:00","prio":"lead-samorzad","score":75,"title":"Gmina Chelm: przetarg na dwie mobilne stacje uzdatniania wody, uplynal termin ofert","loc":"pow. chelmski, Pokrowka","lat":51.14,"lon":23.47,"rec":"Lead B2G: sledzic rozstrzygniecie i wykonawce, przygotowac wejscie z oferta pakietowa dla mieszkancow.","src":[{"label":"e-Zamowienia, BZP 00341788","url":"https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-e8616ee2-85d8-4628-90fe-3737b57473ae"}]},{"id":"2026-07-22-wody-polskie-limity","ts":"2026-07-22T14:07:00+02:00","prio":"swiadomosc","score":37,"title":"Wody Polskie przypominaja o limitach poboru wody, kontekst suszy hydrologicznej","loc":"cale woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Ponizej progu kampanii. Material do tresci edukacyjnych o zapasie wody.","src":[{"label":"Lublin112, 22.07","url":"https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/"}]},{"id":"2026-07-20-nawalnice-skutki","ts":"2026-07-20T08:45:00+02:00","prio":"reaktywna","score":88,"title":"Skutki nawalnic: 234 wypompowania wody, zalane podziemia szpitala w Bialej Podlaskiej","loc":"pow. bialski (213 interwencji), krasnicki, chelmski, wlodawski","lat":52.03,"lon":23.12,"rec":"Kampania reaktywna w promieniu 15 km od powiatow dotknietych. Flaga wrazliwosci: ton informacyjno-poradnikowy, bez epatowania.","src":[{"label":"Kurier Lubelski, 20.07","url":"https://kurierlubelski.pl/zalane-posesje-i-podziemia-szpitala-gwaltowne-burze-przeszly-przez-lubelszczyzne-gdzie-strazacy-mieli-najwiecej-pracy/ar/c1p2-29194989"}]},{"id":"2026-07-02-burze-420-interwencji","ts":"2026-07-02T09:10:00+02:00","prio":"reaktywna","score":84,"title":"420 interwencji strazakow po burzach, zerwane dachy i polamane drzewa","loc":"cale woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania reaktywna wojewodzka. Bez osob poszkodowanych, przekaz moze byc rzeczowo sprzedazowy.","src":[{"label":"Lublin112, 02.07","url":"https://www.lublin112.pl/juz-ponad-400-interwencji-strazakow-po-burzach-w-lubelskiem-wiatr-zrywal-dachy-i-lamal-drzewa/"}]}]};
+const DATA = {"region":"woj. lubelskie","aktualizacja":"2026-07-27T09:20:00+02:00","okno_mapy_h":72,"sygnaly":[{"id":"2026-07-24-imgw-burze","ts":"2026-07-24T13:19:00+02:00","prio":"wyprzedzajaca","score":72,"title":"Burze i ulewy, ostrzeżenie IMGW 1 stopnia dla całego województwa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca, geo całe województwo, przekaz: Przygotuj się zanim uderzy. Budżet średni (200-500 zł/dzień).","src":[{"label":"IMGW API","url":"https://danepubliczne.imgw.pl/api/data/warningsmeteo"},{"label":"Lublin112, 24.07","url":"https://www.lublin112.pl/burze-ulewy-i-grad-na-lubelszczyznie-w-weekend-pogoda-wyraznie-sie-poprawi/"}]},{"id":"2026-07-24-luw-syreny","ts":"2026-07-24T09:53:00+02:00","prio":"lead-samorzad","score":75,"title":"Lubelski Urząd Wojewódzki: modułowy system wczesnego ostrzegania, syreny alarmowe","loc":"Lublin, zasięg wojewódzki","lat":51.21,"lon":22.64,"rec":"Lead B2G: wpisać do archiwum OC, obserwować części i wykonawców, szukać ofert komplementarnych dla gmin.","src":[{"label":"TED 408860-2026","url":"https://ted.europa.eu/en/notice/-/detail/408860-2026"}]},{"id":"2026-07-23-imgw-ostrzezenie","ts":"2026-07-23T07:38:00+02:00","prio":"wyprzedzajaca","score":68,"title":"IMGW ostrzega przed burzami w Lubelskiem, możliwy grad i silne porywy wiatru","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania wyprzedzająca na dobę, geo całe województwo, przekaz poradnikowy.","src":[{"label":"Kurier Lubelski, 23.07","url":"https://kurierlubelski.pl/imgw-ostrzega-przed-burzami-w-lubelskiem-mozliwy-grad-i-silne-porywy-wiatru/ar/c1p2-29204495"}]},{"id":"2026-07-22-chelm-suw","ts":"2026-07-22T10:00:00+02:00","prio":"lead-samorzad","score":75,"title":"Gmina Chełm: przetarg na dwie mobilne stacje uzdatniania wody, upłynął termin ofert","loc":"pow. chełmski, Pokrówka","lat":51.14,"lon":23.47,"rec":"Lead B2G: śledzić rozstrzygnięcie i wykonawcę, przygotować wejście z ofertą pakietową dla mieszkańców.","src":[{"label":"e-Zamówienia, BZP 00341788","url":"https://ezamowienia.gov.pl/mp-client/search/list/ocds-148610-e8616ee2-85d8-4628-90fe-3737b57473ae"}]},{"id":"2026-07-22-wody-polskie-limity","ts":"2026-07-22T14:07:00+02:00","prio":"swiadomosc","score":37,"title":"Wody Polskie przypominają o limitach poboru wody, kontekst suszy hydrologicznej","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Poniżej progu kampanii. Materiał do treści edukacyjnych o zapasie wody.","src":[{"label":"Lublin112, 22.07","url":"https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/"}]},{"id":"2026-07-20-nawalnice-skutki","ts":"2026-07-20T08:45:00+02:00","prio":"reaktywna","score":88,"title":"Skutki nawałnic: 234 wypompowania wody, zalane podziemia szpitala w Białej Podlaskiej","loc":"pow. bialski (213 interwencji), kraśnicki, chełmski, włodawski","lat":52.03,"lon":23.12,"rec":"Kampania reaktywna w promieniu 15 km od powiatów dotkniętych. Flaga wrażliwości: ton informacyjno-poradnikowy, bez epatowania.","src":[{"label":"Kurier Lubelski, 20.07","url":"https://kurierlubelski.pl/zalane-posesje-i-podziemia-szpitala-gwaltowne-burze-przeszly-przez-lubelszczyzne-gdzie-strazacy-mieli-najwiecej-pracy/ar/c1p2-29194989"}]},{"id":"2026-07-02-burze-420-interwencji","ts":"2026-07-02T09:10:00+02:00","prio":"reaktywna","score":84,"title":"420 interwencji strażaków po burzach, zerwane dachy i połamane drzewa","loc":"całe woj. lubelskie","lat":51.25,"lon":22.57,"rec":"Kampania reaktywna wojewódzka. Bez osób poszkodowanych, przekaz może być rzeczowo sprzedażowy.","src":[{"label":"Lublin112, 02.07","url":"https://www.lublin112.pl/juz-ponad-400-interwencji-strazakow-po-burzach-w-lubelskiem-wiatr-zrywal-dachy-i-lamal-drzewa/"}]}]};
 const COLORS={reaktywna:"#C0392B",wyprzedzajaca:"#E8A200",swiadomosc:"#7F8C8D","lead-samorzad":"#2E6DA4"};
-const LABELS={reaktywna:"REKLAMA REAKTYWNA",wyprzedzajaca:"REKLAMA WYPRZEDZAJACA",swiadomosc:"BUDOWANIE SWIADOMOSCI","lead-samorzad":"LEAD DO SAMORZADU"};
-const NAZWY={all:"Wszystkie",reaktywna:"Reaktywna",wyprzedzajaca:"Wyprzedzajaca",swiadomosc:"Swiadomosc","lead-samorzad":"Lead do samorzadu"};
+const LABELS={reaktywna:"REKLAMA REAKTYWNA",wyprzedzajaca:"REKLAMA WYPRZEDZAJĄCA",swiadomosc:"BUDOWANIE ŚWIADOMOŚCI","lead-samorzad":"LEAD DO SAMORZĄDU"};
+const NAZWY={all:"Wszystkie",reaktywna:"Reaktywna",wyprzedzajaca:"Wyprzedzająca",swiadomosc:"Świadomość","lead-samorzad":"Lead do samorządu"};
 const OKNO_H = DATA.okno_mapy_h || 72;
 
 const now = new Date();
@@ -102,7 +102,7 @@ document.getElementById('c-mapa').textContent = swieze.length;
 document.getElementById('c-arch').textContent = stare.length;
 document.getElementById('hdr').textContent =
   'Gotowi Teraz | aktualizacja ' + fmtDT(new Date(DATA.aktualizacja)) +
-  ' | okno mapy: ' + OKNO_H + 'h | sygnalow lacznie: ' + wszystkie.length;
+  ' | okno mapy: ' + OKNO_H + 'h | sygnałów łącznie: ' + wszystkie.length;
 
 function fmtDT(d){
   return d.toLocaleDateString('pl-PL',{day:'2-digit',month:'2-digit',year:'numeric'}) + ' godz. ' +
@@ -147,7 +147,7 @@ function rysujMape(k){
      .bindPopup('<div class="popup-t"><span class="badge" style="background:'+COLORS[s.prio]+'">'+
         LABELS[s.prio]+' | SCORE '+s.score+'</span><br>'+s.title+'</div>'+
         '<div class="popup-s"><strong>Kiedy:</strong> '+fmtDT(s.d)+'<br><strong>Lokalizacja:</strong> '+s.loc+
-        '<br><strong>Rekomendacja:</strong> '+s.rec+'<br><strong>Zrodla:</strong> '+zrodla(s)+'</div>',{maxWidth:340});
+        '<br><strong>Rekomendacja:</strong> '+s.rec+'<br><strong>Źródła:</strong> '+zrodla(s)+'</div>',{maxWidth:340});
   });
 }
 if(swieze.length === 0){
@@ -167,7 +167,7 @@ function rysujArchiwum(k){
   box.innerHTML = '';
   const lista = stare.filter(s => k==='all' || s.prio===k);
   if(lista.length === 0){
-    box.innerHTML = '<div class="empty"><h3>Brak wpisow w archiwum dla tego filtru</h3><p>Zmien filtr kategorii.</p></div>';
+    box.innerHTML = '<div class="empty"><h3>Brak wpisów w archiwum dla tego filtru</h3><p>Zmień filtr kategorii.</p></div>';
     return;
   }
   const dni = {};
@@ -176,7 +176,7 @@ function rysujArchiwum(k){
     const grupa = dni[kk];
     const sek = document.createElement('div');
     sek.className = 'day';
-    const ile = grupa.length === 1 ? '1 sygnal' : (grupa.length < 5 ? grupa.length+' sygnaly' : grupa.length+' sygnalow');
+    const ile = grupa.length === 1 ? '1 sygnał' : (grupa.length < 5 ? grupa.length+' sygnały' : grupa.length+' sygnałów');
     sek.innerHTML = '<h2>'+fmtDzien(grupa[0].d)+'<span>'+ile+'</span></h2>';
     grupa.sort((a,b)=>b.score-a.score).forEach(s => {
       const c = document.createElement('div');
@@ -185,7 +185,7 @@ function rysujArchiwum(k){
         '<div class="meta"><span class="badge" style="background:'+COLORS[s.prio]+'">'+LABELS[s.prio]+
         ' | SCORE '+s.score+'</span> '+fmtDT(s.d)+' &nbsp;|&nbsp; '+s.loc+'</div>'+
         '<p><strong>Rekomendacja:</strong> '+s.rec+'</p>'+
-        '<p style="font-size:11.5px;color:#666"><strong>Zrodla:</strong> '+zrodla(s)+'</p>';
+        '<p style="font-size:11.5px;color:#666"><strong>Źródła:</strong> '+zrodla(s)+'</p>';
       sek.appendChild(c);
     });
     box.appendChild(sek);

@@ -166,8 +166,9 @@ document.getElementById('hdr').textContent =
   'Gotowi Teraz | aktualizacja ' + fmtDT(new Date(DATA.aktualizacja)) +
   ' | okno mapy: ' + OKNO_H + 'h | sygnałów łącznie: ' + wszystkie.length;
 document.getElementById('note-mapa').textContent =
-  'Na mapie są sygnały z ostatnich ' + OKNO_H + ' godzin. Leady do samorządu zostają widoczne do upływu terminu składania ofert. ' +
-  'Po tym czasie sygnał przechodzi do Archiwum, gdzie jest uporządkowany według dni.';
+  'Na mapie są wszystkie sygnały z ostatnich ' + OKNO_H + ' godzin, także słabe, bo one też niosą informację. ' +
+  'Siłę sygnału pokazuje Signal Score i wielkość markera. Leady do samorządu zostają widoczne do upływu terminu składania ofert, ' +
+  'potem sygnał przechodzi do Archiwum, uporządkowanego według dni.';
 document.getElementById('note-arch').textContent =
   'Archiwum pokazuje ostatnie ' + RETENCJA + ' dni.' +
   (poza > 0 ? ' Starszych sygnałów: ' + poza + '. Pozostają w pliku dane_sygnalow.json i nie są kasowane.' : '');

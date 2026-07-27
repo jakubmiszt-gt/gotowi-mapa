@@ -1,8 +1,44 @@
 {
   "region": "woj. lubelskie",
-  "aktualizacja": "2026-07-27T09:35:00+02:00",
+  "aktualizacja": "2026-07-27T14:10:00+02:00",
   "okno_mapy_h": 72,
   "sygnaly": [
+    {
+      "id": "2026-07-26-jubileusz-osp-zynie",
+      "ts": "2026-07-26T14:00:00+02:00",
+      "wykryto": "2026-07-27T14:10:00+02:00",
+      "prio": "lead-samorzad",
+      "score": 45,
+      "title": "Stulecie OSP w Żyniach, uroczystość z udziałem władz gminy",
+      "loc": "Żynie, pow. biłgorajski",
+      "lat": 50.54,
+      "lon": 22.72,
+      "rec": "Lead B2G niskiej wagi: jednostka OSP i władze gminy w jednym miejscu. Punkt kontaktu do rozmowy o pakietach dla mieszkańców.",
+      "src": [
+        {
+          "label": "bilgorajska.pl, 26.07",
+          "url": "https://bilgorajska.pl/aktualnosc,39348,0,0,0,Wielki-jubileusz-OSP-NOWE-ZDJECIA.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-25-oswietlenie-bezpieczenstwo-frampol",
+      "ts": "2026-07-25T10:28:00+02:00",
+      "wykryto": "2026-07-27T14:10:00+02:00",
+      "prio": "swiadomosc",
+      "score": 32,
+      "title": "Gmina Frampol inwestuje w oświetlenie uliczne pod hasłem bezpieczeństwa mieszkańców",
+      "loc": "gmina Frampol, pow. biłgorajski",
+      "lat": 50.67,
+      "lon": 22.67,
+      "rec": "Sygnał słaby, obserwacja. Gmina komunikuje temat bezpieczeństwa, co ułatwia późniejszą rozmowę o gotowości mieszkańców.",
+      "src": [
+        {
+          "label": "bilgorajska.pl, 25.07",
+          "url": "https://bilgorajska.pl/aktualnosc,39343,0,0,0,Jasniej-i-bezpieczniej-w-dwoch-miejscowosciach.html"
+        }
+      ]
+    },
     {
       "id": "2026-07-24-imgw-burze",
       "ts": "2026-07-24T13:19:00+02:00",
@@ -44,6 +80,42 @@
       "wykryto": "2026-07-24T09:53:00+02:00"
     },
     {
+      "id": "2026-07-23-szkolenie-wojskowe-bilgorajski",
+      "ts": "2026-07-23T11:15:00+02:00",
+      "wykryto": "2026-07-27T14:10:00+02:00",
+      "prio": "swiadomosc",
+      "score": 40,
+      "title": "Wojsko zaprasza na wakacyjne szkolenie, wynagrodzenie blisko 6 tys. zł brutto",
+      "loc": "powiat biłgorajski",
+      "lat": 50.54,
+      "lon": 22.72,
+      "rec": "Kontekst bezpieczeństwa i gotowości. Grupa zainteresowana szkoleniem wojskowym to naturalna publiczność dla zestawu osobistego.",
+      "src": [
+        {
+          "label": "bilgorajska.pl, 23.07",
+          "url": "https://bilgorajska.pl/aktualnosc,39329,0,0,0,Wojsko-zaprasza-na-wakacyjne-szkolenie-z-wynagrodzeniem-blisko-6-tys-zl-brutto.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-23-warsztaty-survivalowe-bilgoraj",
+      "ts": "2026-07-23T10:33:00+02:00",
+      "wykryto": "2026-07-27T14:10:00+02:00",
+      "prio": "swiadomosc",
+      "score": 44,
+      "title": "Warsztaty survivalowe dla młodzieży w Biłgoraju: młodzi odkrywcy opanowali podstawy survivalu",
+      "loc": "Biłgoraj, pow. biłgorajski",
+      "lat": 50.54,
+      "lon": 22.72,
+      "rec": "Trafienie we frazę survival z listy słów kluczowych. Materiał do treści i remarketingu wśród rodziców, nie do kampanii sprzedażowej.",
+      "src": [
+        {
+          "label": "bilgorajska.pl, 23.07",
+          "url": "https://bilgorajska.pl/aktualnosc,39328,0,0,0,Mlodzi-odkrywcy-opanowali-podstawy-survivalu.html"
+        }
+      ]
+    },
+    {
       "id": "2026-07-23-imgw-ostrzezenie",
       "ts": "2026-07-23T07:38:00+02:00",
       "prio": "wyprzedzajaca",
@@ -57,6 +129,42 @@
         {
           "label": "Kurier Lubelski, 23.07",
           "url": "https://kurierlubelski.pl/imgw-ostrzega-przed-burzami-w-lubelskiem-mozliwy-grad-i-silne-porywy-wiatru/ar/c1p2-29204495"
+        }
+      ],
+      "wykryto": "2026-07-27T09:05:00+02:00"
+    },
+    {
+      "id": "2026-07-22-awaria-wodociagu-lublin",
+      "ts": "2026-07-22T22:00:00+02:00",
+      "wykryto": "2026-07-27T14:10:00+02:00",
+      "prio": "reaktywna",
+      "score": 64,
+      "title": "Awaria wodociągu w Lublinie: brak wody od godz. 22:00 do 6:00 rano na kilkunastu ulicach",
+      "loc": "Lublin: Turystyczna, Hajdowska, Łuszczowska, Zawieprzycka, Łagiewnicka, Jakubowicka",
+      "lat": 51.26,
+      "lon": 22.61,
+      "rec": "Sygnał wprost produktowy: brak wody w kranie. Geo-fence na dzielnice objęte awarią, przekaz: Woda na 72 godziny pod ręką. Przy powtórce awarii uruchomić natychmiast.",
+      "src": [
+        {
+          "label": "Spotted Lublin",
+          "url": "https://spottedlublin.pl/awaria-wodociagu-w-lublinie-brak-wody-znamy-przewidywana-godzine-wznowienia-dostaw/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-22-wody-polskie-limity",
+      "ts": "2026-07-22T14:07:00+02:00",
+      "prio": "swiadomosc",
+      "score": 37,
+      "title": "Wody Polskie przypominają o limitach poboru wody, kontekst suszy hydrologicznej",
+      "loc": "całe woj. lubelskie",
+      "lat": 51.25,
+      "lon": 22.57,
+      "rec": "Poniżej progu kampanii. Materiał do treści edukacyjnych o zapasie wody.",
+      "src": [
+        {
+          "label": "Lublin112, 22.07",
+          "url": "https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/"
         }
       ],
       "wykryto": "2026-07-27T09:05:00+02:00"
@@ -81,22 +189,22 @@
       "termin": "2026-07-22T10:00:00+02:00"
     },
     {
-      "id": "2026-07-22-wody-polskie-limity",
-      "ts": "2026-07-22T14:07:00+02:00",
+      "id": "2026-07-21-alarm-2026-cwiczenia-oc",
+      "ts": "2026-07-21T07:00:00+02:00",
+      "wykryto": "2026-07-27T14:10:00+02:00",
       "prio": "swiadomosc",
-      "score": 37,
-      "title": "Wody Polskie przypominają o limitach poboru wody, kontekst suszy hydrologicznej",
-      "loc": "całe woj. lubelskie",
+      "score": 52,
+      "title": "ALARM 2026: ogólnopolskie ćwiczenia obrony cywilnej, syreny alarmowe słyszalne w całym regionie",
+      "loc": "Lublin i powiat lubelski, ćwiczenia ogólnopolskie",
       "lat": 51.25,
       "lon": 22.57,
-      "rec": "Poniżej progu kampanii. Materiał do treści edukacyjnych o zapasie wody.",
+      "rec": "Najlepszy moment na kampanię świadomościową: mieszkańcy realnie usłyszeli syreny. Przekaz: Gotowość to spokój, sprawdź czego Ci brakuje. Budżet niski, remarketing i treści edukacyjne.",
       "src": [
         {
-          "label": "Lublin112, 22.07",
-          "url": "https://www.lublin112.pl/pobor-wody-bez-pozwolenia-ma-swoje-granice-wody-polskie-przypominaja-o-kluczowych-limitach/"
+          "label": "eLubaczów, 20.07",
+          "url": "https://elubaczow.com/2026/07/20/we-wtorek-uslyszymy-syreny-alarmowe-w-calym-regionie-to-cwiczenia/"
         }
-      ],
-      "wykryto": "2026-07-27T09:05:00+02:00"
+      ]
     },
     {
       "id": "2026-07-20-nawalnice-skutki",

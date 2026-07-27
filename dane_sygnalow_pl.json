@@ -1,7 +1,7 @@
 {
   "zakres": "Polska",
   "tytul": "Monitoring krajowy sygnałów reklamowych, Polska",
-  "aktualizacja": "2026-07-27T14:40:00+02:00",
+  "aktualizacja": "2026-07-27T15:10:00+02:00",
   "okno_mapy_h": 72,
   "retencja_dni": 90,
   "promien_geo_km": 15,
@@ -509,6 +509,63 @@
         {
           "label": "tko.pl, 08.07",
           "url": "https://tko.pl/378873,2026,07,08,pozar-w-bloku-ewakuowano-mieszkancow-jedna-osoba-poszkodowana"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-19-powodz-biala-podlaska",
+      "ts": "2026-07-19T17:00:00+02:00",
+      "wykryto": "2026-07-27T15:10:00+02:00",
+      "woj": "lubelskie",
+      "prio": "reaktywna",
+      "score": 80,
+      "title": "Kataklizm w Białej Podlaskiej: blisko 180 interwencji straży po ulewie, zalane piwnice i podziemia szpitala",
+      "loc": "Biała Podlaska",
+      "lat": 52.03,
+      "lon": 23.12,
+      "rec": "Zdarzenie bez ofiar, ale duża skala: zalane domy, garaże podziemne, korytarze szpitala. Kampania reaktywna w promieniu 15 km, ton informacyjno-poradnikowy o zabezpieczeniu mienia i zapasach na wypadek odcięcia od usług.",
+      "src": [
+        {
+          "label": "Słowo Podlasia, 19.07",
+          "url": "https://www.slowopodlasia.pl/artykul/45575,kataklizm-w-bialej-podlaskiej-blisko-180-interwencji-strazakow-po-poteznej-ulewie-filmik-zdjecia"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-17-susza-kamienica-polska",
+      "ts": "2026-07-17T13:00:00+02:00",
+      "wykryto": "2026-07-27T15:10:00+02:00",
+      "woj": "śląskie",
+      "prio": "swiadomosc",
+      "score": 55,
+      "title": "Kamienica Polska: zakaz podlewania ogrodów i napełniania basenów, bardzo niski poziom wód gruntowych",
+      "loc": "gmina Kamienica Polska, pow. częstochowski",
+      "lat": 50.69,
+      "lon": 19.13,
+      "rec": "Formalny zakaz wójta, sytuacja utrzymuje się od kilku tygodni bez poprawy. Materiał do treści edukacyjnych o zapasie wody pitnej w gospodarstwie domowym, ton rzeczowy, bez presji sprzedażowej.",
+      "src": [
+        {
+          "label": "Radio Jura, 17.07",
+          "url": "https://www.radiojura.pl/kamienica-polska-zakaz-podlewania-ogrodkow-ciagle-aktualny.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-15-burze-podkarpackie",
+      "ts": "2026-07-15T10:33:00+02:00",
+      "wykryto": "2026-07-27T15:10:00+02:00",
+      "woj": "podkarpackie",
+      "prio": "reaktywna",
+      "score": 70,
+      "title": "Burze nad Podkarpaciem: blisko 60 interwencji straży, uszkodzone dachy i zalane posesje, ostrzeżenie 2. stopnia",
+      "loc": "woj. podkarpackie (kilkanaście powiatów), marker: Rzeszów",
+      "lat": 50.04,
+      "lon": 22.0,
+      "rec": "Kampania reaktywna wojewódzka, geo-fence na powiaty z największą liczbą zgłoszeń. Ton informacyjno-poradnikowy, bez epatowania szkodami.",
+      "src": [
+        {
+          "label": "Rzeszów News, 15.07",
+          "url": "https://rzeszow-news.pl/burze-uderzyly-w-podkarpacie-dziesiatki-interwencji-strazakow-a-to-jeszcze-nie-koniec-zdjecia/"
         }
       ]
     },

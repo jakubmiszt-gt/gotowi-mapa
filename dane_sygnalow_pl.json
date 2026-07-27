@@ -1,7 +1,7 @@
 {
   "zakres": "Polska",
   "tytul": "Monitoring krajowy sygnałów reklamowych, Polska",
-  "aktualizacja": "2026-07-27T13:30:00+02:00",
+  "aktualizacja": "2026-07-27T13:20:00+02:00",
   "okno_mapy_h": 72,
   "retencja_dni": 90,
   "promien_geo_km": 15,
@@ -11,6 +11,158 @@
   ],
   "zoom": 6,
   "sygnaly": [
+    {
+      "id": "2026-07-26-imgw-burze-kujawsko-pomorskie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "kujawsko-pomorskie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. kujawsko-pomorskie (23 powiaty, praktycznie całe województwo), marker: Bydgoszcz",
+      "lat": 53.12,
+      "lon": 18.0,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-imgw-burze-lubuskie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "lubuskie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. lubuskie (całe województwo), marker: Gorzów Wielkopolski",
+      "lat": 52.73,
+      "lon": 15.24,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-imgw-burze-mazowieckie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. mazowieckie (12 powiatów, zachodnia i północna część), marker: Warszawa",
+      "lat": 52.23,
+      "lon": 21.01,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-imgw-burze-podlaskie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "podlaskie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. podlaskie (4 powiaty, południowo-zachodnia część), marker: Białystok",
+      "lat": 53.13,
+      "lon": 23.16,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-imgw-burze-pomorskie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "pomorskie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. pomorskie (całe województwo), marker: Gdańsk",
+      "lat": 54.35,
+      "lon": 18.65,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-imgw-burze-warminsko-mazurskie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "warmińsko-mazurskie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. warmińsko-mazurskie (całe województwo), marker: Olsztyn",
+      "lat": 53.78,
+      "lon": 20.49,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-imgw-burze-wielkopolskie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "wielkopolskie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. wielkopolskie (całe województwo), marker: Poznań",
+      "lat": 52.41,
+      "lon": 16.93,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-26-imgw-burze-zachodniopomorskie",
+      "ts": "2026-07-26T12:02:00+02:00",
+      "wykryto": "2026-07-27T13:20:00+02:00",
+      "woj": "zachodniopomorskie",
+      "prio": "wyprzedzajaca",
+      "score": 65,
+      "title": "Ostrzeżenie IMGW 1 stopnia przed burzami: opady do 35 mm, porywy do 85 km/h, lokalnie grad",
+      "loc": "woj. zachodniopomorskie (całe województwo), marker: Szczecin",
+      "lat": 53.43,
+      "lon": 14.55,
+      "rec": "Ostrzeżenie obowiązywało w nocy 26/27.07 i wygasło 27.07 o godz. 10:00. Nie uruchamiać nowej kampanii wyprzedzającej. Wykorzystać do remarketingu tam, gdzie wystąpiły szkody, przekaz poradnikowy. Budżet niski (do 200 zł/dzień).",
+      "src": [
+        {
+          "label": "IMGW, ostrzeżenia meteo (API)",
+          "url": "https://danepubliczne.imgw.pl/api/data/warningsmeteo"
+        }
+      ]
+    },
     {
       "id": "2026-07-24-imgw-burze",
       "ts": "2026-07-24T13:19:00+02:00",

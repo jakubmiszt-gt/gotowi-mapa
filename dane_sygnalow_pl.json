@@ -1,7 +1,7 @@
 {
   "zakres": "Polska",
   "tytul": "Centrum informacji lokalnych, Polska",
-  "aktualizacja": "2026-07-27T15:35:00+02:00",
+  "aktualizacja": "2026-07-28T10:15:00+02:00",
   "tytul_portal": "Centrum informacji lokalnych, Polska",
   "okno_mapy_h": 72,
   "retencja_dni": 90,
@@ -12,25 +12,6 @@
   ],
   "zoom": 6,
   "sygnaly": [
-    {
-      "id": "2026-07-27-podtopienia-osobnica-jasielski",
-      "ts": "2026-07-27T02:00:00+02:00",
-      "wykryto": "2026-07-27T15:35:00+02:00",
-      "woj": "podkarpackie",
-      "prio": "reaktywna",
-      "score": 76,
-      "title": "Nocne ulewy nad powiatem jasielskim, podtopienia, najpoważniejsze w Osobnicy",
-      "loc": "Osobnica i okolice, pow. jasielski",
-      "lat": 49.78,
-      "lon": 21.38,
-      "rec": "Zdarzenie z ostatniej doby, woda wciąż usuwana. Kampania reaktywna w promieniu 15 km, przekaz o zabezpieczeniu domu i zapasie na wypadek odcięcia prądu lub wody. Budżet średni.",
-      "src": [
-        {
-          "label": "Rzeszów News, 27.07",
-          "url": "https://rzeszow-news.pl/burze-i-lokalne-podtopienia-na-podkarpaciu-strazacy-interweniowali-blisko-200-razy-zdjecia/"
-        }
-      ]
-    },
     {
       "id": "2026-07-27-wylaczenia-wody-wroclaw",
       "ts": "2026-07-27T08:00:00+02:00",
@@ -52,79 +33,21 @@
       ]
     },
     {
-      "id": "2026-07-24-zakaz-podlewania-liw",
-      "ts": "2026-07-24T09:00:00+02:00",
+      "id": "2026-07-27-podtopienia-osobnica-jasielski",
+      "ts": "2026-07-27T02:00:00+02:00",
       "wykryto": "2026-07-27T15:35:00+02:00",
-      "trwa_do": "2026-08-31T23:59:00+02:00",
-      "woj": "mazowieckie",
-      "prio": "swiadomosc",
-      "score": 60,
-      "title": "Gmina Liw: bezwzględny zakaz podlewania ogrodów i napełniania basenów w każdy weekend do końca sierpnia",
-      "loc": "gmina Liw, pow. węgrowski",
-      "lat": 52.4,
-      "lon": 22.03,
-      "rec": "Zakaz cykliczny, obowiązuje od piątku do niedzieli aż do 31 sierpnia, więc temat wraca co tydzień. Treści edukacyjne o gospodarowaniu wodą w domu, remarketing w piątki. Budżet niski.",
-      "src": [
-        {
-          "label": "topagrar, lipiec 2026",
-          "url": "https://www.topagrar.pl/articles/ogrod/zakaz-podlewania-juz-obowiazuje-kolejne-gminy-ograniczaja-korzystanie-z-wody-2687052"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-22-awaria-wodociagu-rzekun",
-      "ts": "2026-07-22T09:00:00+02:00",
-      "wykryto": "2026-07-27T15:35:00+02:00",
-      "woj": "mazowieckie",
+      "woj": "podkarpackie",
       "prio": "reaktywna",
-      "score": 62,
-      "title": "Awaria sieci wodociągowej w Rzekuniu, mieszkańcy części ulic bez wody",
-      "loc": "Rzekuń, pow. ostrołęcki",
-      "lat": 53.05,
-      "lon": 21.63,
-      "rec": "Sygnał wprost produktowy. Geo-fence na gminę, przekaz: woda na 72 godziny w domu. Data z artykułu portalu, doprecyzować przy powtórce awarii.",
+      "score": 76,
+      "title": "Nocne ulewy nad powiatem jasielskim, podtopienia, najpoważniejsze w Osobnicy",
+      "loc": "Osobnica i okolice, pow. jasielski",
+      "lat": 49.78,
+      "lon": 21.38,
+      "rec": "Zdarzenie z ostatniej doby, woda wciąż usuwana. Kampania reaktywna w promieniu 15 km, przekaz o zabezpieczeniu domu i zapasie na wypadek odcięcia prądu lub wody. Budżet średni.",
       "src": [
         {
-          "label": "eOstrołęka",
-          "url": "https://www.eostroleka.pl/awaria-sieci-wodociagowej-w-rzekuniu-mieszkancy-czesci-ulic-bez-wody,art130121.html"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-20-zakaz-podlewania-zareby-koscielne",
-      "ts": "2026-07-20T10:00:00+02:00",
-      "wykryto": "2026-07-27T15:35:00+02:00",
-      "woj": "mazowieckie",
-      "prio": "swiadomosc",
-      "score": 48,
-      "title": "Gmina Zaręby Kościelne wprowadza zakaz podlewania na czas suszy",
-      "loc": "gmina Zaręby Kościelne, pow. ostrowski",
-      "lat": 52.68,
-      "lon": 22.13,
-      "rec": "Kolejna gmina mazowiecka z formalnym zakazem. Materiał do treści o zapasie wody, nie do kampanii sprzedażowej. Budżet niski.",
-      "src": [
-        {
-          "label": "Gmina Zaręby Kościelne",
-          "url": "https://zareby-kosc.pl/aktualnosci/zakaz-podlewania-na-terenie-gminy-w-okresie-suszy.html"
-        }
-      ]
-    },
-    {
-      "id": "2026-06-25-beczkowozy-radzymin",
-      "ts": "2026-06-25T12:00:00+02:00",
-      "wykryto": "2026-07-27T15:35:00+02:00",
-      "woj": "mazowieckie",
-      "prio": "reaktywna",
-      "score": 79,
-      "title": "Radzymin: całkowity zakaz podlewania z sieci, gmina rozstawiła beczkowozy z wodą dla mieszkańców",
-      "loc": "gmina Radzymin, pow. wołomiński",
-      "lat": 52.42,
-      "lon": 21.19,
-      "rec": "Najmocniejszy sygnał produktowy w mazowieckiem: mieszkańcy fizycznie chodzą po wodę do beczkowozu. Geo-fence na gminę i sąsiednie, przekaz o zapasie wody w domu. Zakaz wprowadzony 25.06, sprawdzić przy przebiegu czy nadal obowiązuje.",
-      "src": [
-        {
-          "label": "Życie Powiatu na Mazowszu",
-          "url": "https://www.zyciepw.pl/radzymin-lokalizacja-beczkowozow-i-komunikat-w-sprawie-ograniczen-w-korzystaniu-z-wody-na-terenie-gminy"
+          "label": "Rzeszów News, 27.07",
+          "url": "https://rzeszow-news.pl/burze-i-lokalne-podtopienia-na-podkarpaciu-strazacy-interweniowali-blisko-200-razy-zdjecia/"
         }
       ]
     },
@@ -380,6 +303,68 @@
       "woj": "lubelskie"
     },
     {
+      "id": "2026-07-24-zakaz-podlewania-liw",
+      "ts": "2026-07-24T09:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "trwa_do": "2026-08-31T23:59:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "swiadomosc",
+      "score": 60,
+      "title": "Gmina Liw: bezwzględny zakaz podlewania ogrodów i napełniania basenów w każdy weekend do końca sierpnia",
+      "loc": "gmina Liw, pow. węgrowski",
+      "lat": 52.4,
+      "lon": 22.03,
+      "rec": "Zakaz cykliczny, obowiązuje od piątku do niedzieli aż do 31 sierpnia, więc temat wraca co tydzień. Treści edukacyjne o gospodarowaniu wodą w domu, remarketing w piątki. Budżet niski.",
+      "src": [
+        {
+          "label": "topagrar, lipiec 2026",
+          "url": "https://www.topagrar.pl/articles/ogrod/zakaz-podlewania-juz-obowiazuje-kolejne-gminy-ograniczaja-korzystanie-z-wody-2687052"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-24-woda-czarnow-warszawski-zachodni",
+      "ts": "2026-07-24T00:00:00+02:00",
+      "wykryto": "2026-07-28T10:15:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "reaktywna",
+      "score": 71,
+      "title": "Woda z SUW Czarnów wciąż skażona mimo napraw, zakaz spożycia i higieny dla 14 miejscowości",
+      "loc": "Czarnów i okolice, pow. warszawski zachodni",
+      "lat": 52.31,
+      "lon": 20.35,
+      "rec": "Powtórne skażenie po nieudanych działaniach naprawczych, sytuacja przedłuża się. Geo-fence na obszar zasilany z ujęcia, przekaz o zapasie wody na wypadek długotrwałego zakazu. Budżet średni.",
+      "src": [
+        {
+          "label": "Życie Powiatu na Mazowszu, 24.07",
+          "url": "https://www.zyciepw.pl/skazona-woda-z-ujecia-w-czarnowie-sanepid-ostrzega-nie-nadaje-sie-do-picia-ani-do-higieny"
+        },
+        {
+          "label": "Radio ESKA Warszawa, 25.07",
+          "url": "https://warszawa.eska.pl/tysiace-mieszkancow-bez-bezpiecznej-wody-sanepid-ostrzega-przed-groznymi-bakteriami-aa-GN5T-cs9J-NYh6.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-24-woda-odechow-skaryszew",
+      "ts": "2026-07-24T00:00:00+02:00",
+      "wykryto": "2026-07-28T10:15:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "reaktywna",
+      "score": 80,
+      "title": "Eskalacja w gminie Skaryszew: enterokoki w wodociągu Odechów, woda niezdatna nawet po przegotowaniu, wsparcie WOT",
+      "loc": "Odechów i 8 miejscowości, gmina Skaryszew, pow. radomski",
+      "lat": 51.22,
+      "lon": 21.3,
+      "rec": "Sytuacja eskaluje od tygodnia (najpierw coli, potem enterokoki), uruchomiono punkty wydawania wody butelkowanej i wsparcie wojska. Silny sygnał produktowy, kampania reaktywna w promieniu 15 km, przekaz o zapasie wody na dłuższą awarię. Budżet średni.",
+      "src": [
+        {
+          "label": "Echo Dnia Radomskie, 24.07",
+          "url": "https://echodnia.eu/radomskie/alarm-w-gminie-skaryszew-w-wodzie-wykryto-enterokoki-mieszkancy-dostana-wode-butelkowana/ar/c1p2-29209823"
+        }
+      ]
+    },
+    {
       "id": "2026-07-23-szkolenie-wojskowe-bilgorajski",
       "ts": "2026-07-23T11:15:00+02:00",
       "wykryto": "2026-07-27T14:10:00+02:00",
@@ -435,6 +420,25 @@
       ],
       "wykryto": "2026-07-27T09:05:00+02:00",
       "woj": "lubelskie"
+    },
+    {
+      "id": "2026-07-24-woda-goscimin-wielki-nowe-miasto",
+      "ts": "2026-07-23T00:00:00+02:00",
+      "wykryto": "2026-07-28T10:15:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "reaktywna",
+      "score": 76,
+      "title": "Enterokoki w wodociągu Gościmin Wielki, blisko 6600 osób w gminach Nowe Miasto i Sońsk bez wody do picia i higieny",
+      "loc": "Nowe Miasto i 33 wsie, pow. płoński",
+      "lat": 52.74,
+      "lon": 20.42,
+      "rec": "Sygnał produktowy wprost: skażenie mikrobiologiczne, zakaz spożycia i higieny obejmujący prawie 6600 mieszkańców, obowiązuje do odwołania. Kampania reaktywna w promieniu 15 km, przekaz o zapasie wody butelkowanej na 72 godziny. Budżet średni.",
+      "src": [
+        {
+          "label": "Radio ESKA Warszawa, 25.07",
+          "url": "https://warszawa.eska.pl/tysiace-mieszkancow-bez-bezpiecznej-wody-sanepid-ostrzega-przed-groznymi-bakteriami-aa-GN5T-cs9J-NYh6.html"
+        }
+      ]
     },
     {
       "id": "2026-07-22-awaria-wodociagu-lublin",
@@ -495,6 +499,25 @@
       "woj": "lubelskie"
     },
     {
+      "id": "2026-07-22-awaria-wodociagu-rzekun",
+      "ts": "2026-07-22T09:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "reaktywna",
+      "score": 62,
+      "title": "Awaria sieci wodociągowej w Rzekuniu, mieszkańcy części ulic bez wody",
+      "loc": "Rzekuń, pow. ostrołęcki",
+      "lat": 53.05,
+      "lon": 21.63,
+      "rec": "Sygnał wprost produktowy. Geo-fence na gminę, przekaz: woda na 72 godziny w domu. Data z artykułu portalu, doprecyzować przy powtórce awarii.",
+      "src": [
+        {
+          "label": "eOstrołęka",
+          "url": "https://www.eostroleka.pl/awaria-sieci-wodociagowej-w-rzekuniu-mieszkancy-czesci-ulic-bez-wody,art130121.html"
+        }
+      ]
+    },
+    {
       "id": "2026-07-21-alarm-2026-cwiczenia-oc",
       "ts": "2026-07-21T07:00:00+02:00",
       "wykryto": "2026-07-27T14:10:00+02:00",
@@ -510,6 +533,25 @@
         {
           "label": "eLubaczów, 20.07",
           "url": "https://elubaczow.com/2026/07/20/we-wtorek-uslyszymy-syreny-alarmowe-w-calym-regionie-to-cwiczenia/"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-20-zakaz-podlewania-zareby-koscielne",
+      "ts": "2026-07-20T10:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "swiadomosc",
+      "score": 48,
+      "title": "Gmina Zaręby Kościelne wprowadza zakaz podlewania na czas suszy",
+      "loc": "gmina Zaręby Kościelne, pow. ostrowski",
+      "lat": 52.68,
+      "lon": 22.13,
+      "rec": "Kolejna gmina mazowiecka z formalnym zakazem. Materiał do treści o zapasie wody, nie do kampanii sprzedażowej. Budżet niski.",
+      "src": [
+        {
+          "label": "Gmina Zaręby Kościelne",
+          "url": "https://zareby-kosc.pl/aktualnosci/zakaz-podlewania-na-terenie-gminy-w-okresie-suszy.html"
         }
       ]
     },
@@ -550,6 +592,101 @@
       ],
       "wykryto": "2026-07-27T09:05:00+02:00",
       "woj": "lubelskie"
+    },
+    {
+      "id": "2026-07-19-powodz-biala-podlaska",
+      "ts": "2026-07-19T17:00:00+02:00",
+      "wykryto": "2026-07-27T15:10:00+02:00",
+      "woj": "lubelskie",
+      "prio": "reaktywna",
+      "score": 80,
+      "title": "Kataklizm w Białej Podlaskiej: blisko 180 interwencji straży po ulewie, zalane piwnice i podziemia szpitala",
+      "loc": "Biała Podlaska",
+      "lat": 52.03,
+      "lon": 23.12,
+      "rec": "Zdarzenie bez ofiar, ale duża skala: zalane domy, garaże podziemne, korytarze szpitala. Kampania reaktywna w promieniu 15 km, ton informacyjno-poradnikowy o zabezpieczeniu mienia i zapasach na wypadek odcięcia od usług.",
+      "src": [
+        {
+          "label": "Słowo Podlasia, 19.07",
+          "url": "https://www.slowopodlasia.pl/artykul/45575,kataklizm-w-bialej-podlaskiej-blisko-180-interwencji-strazakow-po-poteznej-ulewie-filmik-zdjecia"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-18-podtopienia-bydgoszcz",
+      "ts": "2026-07-18T10:00:00+02:00",
+      "wykryto": "2026-07-28T10:15:00+02:00",
+      "woj": "kujawsko-pomorskie",
+      "prio": "reaktywna",
+      "score": 55,
+      "title": "Ulewa i burza nad Bydgoszczą, zalane ulice i parkingi, około 50 interwencji straży do południa",
+      "loc": "Bydgoszcz, centrum",
+      "lat": 53.12,
+      "lon": 18.0,
+      "rec": "Zdarzenie z ostatnich dni, skutki nawałnicy w centrum miasta. Kampania reaktywna lokalna, przekaz o zabezpieczeniu domu na wypadek kolejnych ulew. Budżet niski.",
+      "src": [
+        {
+          "label": "Goniec.pl, 18.07",
+          "url": "https://goniec.pl/wystarczylo-kilka-minut-i-polskie-miasto-znalazlo-sie-pod-woda-nagrania-obiegly-polske-wk-wpd-180726"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-18-woda-jodlownik-limanowski",
+      "ts": "2026-07-18T00:00:00+02:00",
+      "wykryto": "2026-07-28T10:15:00+02:00",
+      "woj": "małopolskie",
+      "prio": "reaktywna",
+      "score": 58,
+      "title": "Sanepid: woda z wodociągu wiejskiego Jodłownik wymaga bezwzględnego przegotowania",
+      "loc": "Jodłownik, pow. limanowski",
+      "lat": 49.72,
+      "lon": 20.22,
+      "rec": "Przekroczenie mikrobiologiczne, decyzja sanepidu o obowiązku przegotowania wody. Treści poradnikowe o awaryjnym uzdatnianiu i zapasie wody butelkowanej. Budżet niski.",
+      "src": [
+        {
+          "label": "Limanowa.in, 20.07",
+          "url": "https://limanowa.in/aktualnosci/woda-wymaga-przegotowania/83239"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-17-susza-kamienica-polska",
+      "ts": "2026-07-17T13:00:00+02:00",
+      "wykryto": "2026-07-27T15:10:00+02:00",
+      "woj": "śląskie",
+      "prio": "swiadomosc",
+      "score": 55,
+      "title": "Kamienica Polska: zakaz podlewania ogrodów i napełniania basenów, bardzo niski poziom wód gruntowych",
+      "loc": "gmina Kamienica Polska, pow. częstochowski",
+      "lat": 50.69,
+      "lon": 19.13,
+      "rec": "Formalny zakaz wójta, sytuacja utrzymuje się od kilku tygodni bez poprawy. Materiał do treści edukacyjnych o zapasie wody pitnej w gospodarstwie domowym, ton rzeczowy, bez presji sprzedażowej.",
+      "src": [
+        {
+          "label": "Radio Jura, 17.07",
+          "url": "https://www.radiojura.pl/kamienica-polska-zakaz-podlewania-ogrodkow-ciagle-aktualny.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-15-burze-podkarpackie",
+      "ts": "2026-07-15T10:33:00+02:00",
+      "wykryto": "2026-07-27T15:10:00+02:00",
+      "woj": "podkarpackie",
+      "prio": "reaktywna",
+      "score": 70,
+      "title": "Burze nad Podkarpaciem: blisko 60 interwencji straży, uszkodzone dachy i zalane posesje, ostrzeżenie 2. stopnia",
+      "loc": "woj. podkarpackie (kilkanaście powiatów), marker: Rzeszów",
+      "lat": 50.04,
+      "lon": 22.0,
+      "rec": "Kampania reaktywna wojewódzka, geo-fence na powiaty z największą liczbą zgłoszeń. Ton informacyjno-poradnikowy, bez epatowania szkodami.",
+      "src": [
+        {
+          "label": "Rzeszów News, 15.07",
+          "url": "https://rzeszow-news.pl/burze-uderzyly-w-podkarpacie-dziesiatki-interwencji-strazakow-a-to-jeszcze-nie-koniec-zdjecia/"
+        }
+      ]
     },
     {
       "id": "2026-07-15-pozar-strzelin",
@@ -630,63 +767,6 @@
       ]
     },
     {
-      "id": "2026-07-19-powodz-biala-podlaska",
-      "ts": "2026-07-19T17:00:00+02:00",
-      "wykryto": "2026-07-27T15:10:00+02:00",
-      "woj": "lubelskie",
-      "prio": "reaktywna",
-      "score": 80,
-      "title": "Kataklizm w Białej Podlaskiej: blisko 180 interwencji straży po ulewie, zalane piwnice i podziemia szpitala",
-      "loc": "Biała Podlaska",
-      "lat": 52.03,
-      "lon": 23.12,
-      "rec": "Zdarzenie bez ofiar, ale duża skala: zalane domy, garaże podziemne, korytarze szpitala. Kampania reaktywna w promieniu 15 km, ton informacyjno-poradnikowy o zabezpieczeniu mienia i zapasach na wypadek odcięcia od usług.",
-      "src": [
-        {
-          "label": "Słowo Podlasia, 19.07",
-          "url": "https://www.slowopodlasia.pl/artykul/45575,kataklizm-w-bialej-podlaskiej-blisko-180-interwencji-strazakow-po-poteznej-ulewie-filmik-zdjecia"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-17-susza-kamienica-polska",
-      "ts": "2026-07-17T13:00:00+02:00",
-      "wykryto": "2026-07-27T15:10:00+02:00",
-      "woj": "śląskie",
-      "prio": "swiadomosc",
-      "score": 55,
-      "title": "Kamienica Polska: zakaz podlewania ogrodów i napełniania basenów, bardzo niski poziom wód gruntowych",
-      "loc": "gmina Kamienica Polska, pow. częstochowski",
-      "lat": 50.69,
-      "lon": 19.13,
-      "rec": "Formalny zakaz wójta, sytuacja utrzymuje się od kilku tygodni bez poprawy. Materiał do treści edukacyjnych o zapasie wody pitnej w gospodarstwie domowym, ton rzeczowy, bez presji sprzedażowej.",
-      "src": [
-        {
-          "label": "Radio Jura, 17.07",
-          "url": "https://www.radiojura.pl/kamienica-polska-zakaz-podlewania-ogrodkow-ciagle-aktualny.html"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-15-burze-podkarpackie",
-      "ts": "2026-07-15T10:33:00+02:00",
-      "wykryto": "2026-07-27T15:10:00+02:00",
-      "woj": "podkarpackie",
-      "prio": "reaktywna",
-      "score": 70,
-      "title": "Burze nad Podkarpaciem: blisko 60 interwencji straży, uszkodzone dachy i zalane posesje, ostrzeżenie 2. stopnia",
-      "loc": "woj. podkarpackie (kilkanaście powiatów), marker: Rzeszów",
-      "lat": 50.04,
-      "lon": 22.0,
-      "rec": "Kampania reaktywna wojewódzka, geo-fence na powiaty z największą liczbą zgłoszeń. Ton informacyjno-poradnikowy, bez epatowania szkodami.",
-      "src": [
-        {
-          "label": "Rzeszów News, 15.07",
-          "url": "https://rzeszow-news.pl/burze-uderzyly-w-podkarpacie-dziesiatki-interwencji-strazakow-a-to-jeszcze-nie-koniec-zdjecia/"
-        }
-      ]
-    },
-    {
       "id": "2026-07-02-burze-420-interwencji",
       "ts": "2026-07-02T09:10:00+02:00",
       "prio": "reaktywna",
@@ -704,6 +784,25 @@
       ],
       "wykryto": "2026-07-27T09:05:00+02:00",
       "woj": "lubelskie"
+    },
+    {
+      "id": "2026-06-25-beczkowozy-radzymin",
+      "ts": "2026-06-25T12:00:00+02:00",
+      "wykryto": "2026-07-27T15:35:00+02:00",
+      "woj": "mazowieckie",
+      "prio": "reaktywna",
+      "score": 79,
+      "title": "Radzymin: całkowity zakaz podlewania z sieci, gmina rozstawiła beczkowozy z wodą dla mieszkańców",
+      "loc": "gmina Radzymin, pow. wołomiński",
+      "lat": 52.42,
+      "lon": 21.19,
+      "rec": "Najmocniejszy sygnał produktowy w mazowieckiem: mieszkańcy fizycznie chodzą po wodę do beczkowozu. Geo-fence na gminę i sąsiednie, przekaz o zapasie wody w domu. Zakaz wprowadzony 25.06, sprawdzić przy przebiegu czy nadal obowiązuje.",
+      "src": [
+        {
+          "label": "Życie Powiatu na Mazowszu",
+          "url": "https://www.zyciepw.pl/radzymin-lokalizacja-beczkowozow-i-komunikat-w-sprawie-ograniczen-w-korzystaniu-z-wody-na-terenie-gminy"
+        }
+      ]
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "zakres": "Polska",
   "tytul": "Centrum informacji lokalnych, Polska",
-  "aktualizacja": "2026-07-29T08:32:00+02:00",
+  "aktualizacja": "2026-07-30T08:14+02:00",
   "tytul_portal": "Centrum informacji lokalnych, Polska",
   "okno_mapy_h": 72,
   "retencja_dni": 90,
@@ -12,6 +12,25 @@
   ],
   "zoom": 6,
   "sygnaly": [
+    {
+      "id": "2026-07-29-pozar-hali-skorzewo",
+      "ts": "2026-07-29T11:00:00+02:00",
+      "wykryto": "2026-07-30T08:14+02:00",
+      "woj": "pomorskie",
+      "prio": "reaktywna",
+      "score": 76,
+      "title": "Pożar hali produkcyjnej w Skorzewie (gm. Kościerzyna): 22 osoby ewakuowane, jedna trafiła do szpitala po zaczadzeniu",
+      "loc": "Skorzewo, gm. Kościerzyna, woj. pomorskie",
+      "lat": 54.16806,
+      "lon": 17.97028,
+      "rec": "Ewakuacja to moment wyjscia z domu bez niczego. Przekaz o torbie ewakuacyjnej i dokumentach pod reka. Flaga wrazliwosci: sa poszkodowani, ton wylacznie informacyjny, bez przekazu sprzedazowego.",
+      "src": [
+        {
+          "label": "Polsat News / PAP, 29.07",
+          "url": "https://www.polsatnews.pl/wiadomosc/2026-07-29/potezny-pozar-w-pomorskiem-plonie-hala-produkcyjna-zarzadzono-ewakuacje/"
+        }
+      ]
+    },
     {
       "id": "2026-07-27-wylaczenia-wody-wroclaw",
       "ts": "2026-07-27T08:00:00+02:00",
